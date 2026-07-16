@@ -8,7 +8,10 @@ The architecture diagram below illustrates how components interact, highlighting
 
 **Important Architecture Note:** This pipeline is optimized to run locally on **Intel/amd64** processors. The configurations below ensure that Airflow and Spark operate efficiently on this specific chip architecture.
 
-![London Bike & Weather Pipeline Architecture](image_0.png)
+### London Bike & Weather Pipeline Architecture
+<img width="2816" height="1536" alt="London Bike Architecture" src="https://github.com/user-attachments/assets/840d7d4a-297f-4a97-a616-4c7234fc18a2" />
+
+
 
 ### Key Components
 
