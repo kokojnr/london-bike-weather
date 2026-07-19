@@ -1,8 +1,6 @@
-x-airflow-common:
-  &airflow-common
+x-airflow-common: &airflow-common
   build: .
-  environment:
-    &airflow-common-env
+  environment: &airflow-common-env
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
     AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
     AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
@@ -12,7 +10,7 @@ x-airflow-common:
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
-    - ./plugins:/opt/airflow/plugi
+    - ./plugins:/opt/airflow/plugins
     - ./src:/opt/airflow/src
     - ./data:/opt/airflow/data
   user: "${AIRFLOW_UID:-50000}:0"
@@ -55,8 +53,8 @@ services:
       <<: *airflow-common-env
       _AIRFLOW_DB_UPGRADE: 'true'
       _AIRFLOW_WWW_USER_CREATE: 'true'
-      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
-      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
+      _AIRFLOW_WWW_USER_USERNAME: airflow
+      _AIRFLOW_WWW_USER_PASSWORD: airflow
     depends_on:
       postgres:
         condition: service_healthy

@@ -1,0 +1,21 @@
+[2026-07-19T12:57:41.218+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-19T12:57:41.316+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingest_bronze_layer.weather_ingest manual__2026-07-19T12:29:36.600422+00:00 [queued]>
+[2026-07-19T12:57:41.392+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingest_bronze_layer.weather_ingest manual__2026-07-19T12:29:36.600422+00:00 [queued]>
+[2026-07-19T12:57:41.418+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2026-07-19T12:57:41.503+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): weather_ingest> on 2026-07-19 12:29:36.600422+00:00
+[2026-07-19T12:57:41.557+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ingest_bronze_layer', 'weather_ingest', 'manual__2026-07-19T12:29:36.600422+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/bronze_ingestion_dag.py', '--cfg-path', '/tmp/tmpfc6xo5us']
+[2026-07-19T12:57:41.567+0000] {standard_task_runner.py:91} INFO - Job 25: Subtask weather_ingest
+[2026-07-19T12:57:41.578+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=190) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-19T12:57:41.599+0000] {standard_task_runner.py:63} INFO - Started process 191 to run task
+[2026-07-19T12:57:41.806+0000] {task_command.py:426} INFO - Running <TaskInstance: ingest_bronze_layer.weather_ingest manual__2026-07-19T12:29:36.600422+00:00 [running]> on host 35338605cf15
+[2026-07-19T12:57:42.536+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ingest_bronze_layer' AIRFLOW_CTX_TASK_ID='weather_ingest' AIRFLOW_CTX_EXECUTION_DATE='2026-07-19T12:29:36.600422+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-19T12:29:36.600422+00:00'
+[2026-07-19T12:57:42.551+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-19T12:57:44.385+0000] {connection.py:274} WARNING - Connection schemes (type: google_cloud_platform) shall not contain '_' according to RFC3986.
+[2026-07-19T12:57:44.397+0000] {base.py:84} INFO - Using connection ID 'google_cloud_default' for task execution.
+[2026-07-19T12:57:48.728+0000] {gcs.py:574} INFO - Data stream uploaded to bronze/weather/20260719/data_20260719T122936.json in london_bike_data_bronze bucket
+[2026-07-19T12:57:48.732+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-07-19T12:57:48.737+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-19T12:57:48.759+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ingest_bronze_layer, task_id=weather_ingest, run_id=manual__2026-07-19T12:29:36.600422+00:00, execution_date=20260719T122936, start_date=20260719T125741, end_date=20260719T125748
+[2026-07-19T12:57:48.916+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-07-19T12:57:48.955+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-19T12:57:48.967+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
