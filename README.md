@@ -1,12 +1,12 @@
 ﻿# London Bike & Weather Data Pipeline
 
-This repository contains an end-to-end ELT data pipeline that ingests public London Bike safety data and real-time weather information, processes it using Apache Spark, and loads it into a Google Cloud BigQuery data warehouse for analysis.
+An automated data engineering pipeline that ingests real-time bike station data from TfL and weather data from OpenWeatherMap, processes it using Apache Spark, and loads it into a Google Cloud BigQuery data warehouse for analysis.
 
 ## Project Architecture
 
 The architecture diagram below illustrates how components interact, highlighting the separation of orchestration (Airflow), compute (Spark), and storage (GCP).
 
-**Important Architecture Note:** This pipeline is optimized to run locally on **Intel/amd64** processors. The configurations below ensure that Airflow and Spark operate efficiently on this specific chip architecture.
+**Important Architecture Note:** This pipeline is optimized to run locally on Docker container. The configurations below ensure that Airflow and Spark operate efficiently on this specific chip architecture.
 
 ### London Bike & Weather Pipeline Architecture
 <img width="2816" height="1536" alt="London Bike Architecture" src="https://github.com/user-attachments/assets/840d7d4a-297f-4a97-a616-4c7234fc18a2" />
@@ -34,19 +34,18 @@ These steps ensure a stable environment on an Intel-based machine, resolving com
 1.  **Docker Desktop** (Installed on Windows).
 2.  **Git** (Verified via terminal).
 3.  **Google Cloud Project**: You must have a service account with **BigQuery Admin** and **Storage Admin** roles and have the JSON keyfile available.
+4.  **APIs**: Weather API from https://openweathermap.org/api and Bike data API from https://tfl.gov.uk/info-for/open-data-users/api-documentation
 
 ### Installation & Initialization
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [your-repository-url]
-    cd london-bike-project
+    git clone https://github.com/kokojnr/london-bike-weather
+    cd london-bike-weather
     ```
 
 2.  **Configure Environment Details:**
     *   Confirm your `docker-compose.yaml` has the correct settings:
-        *   Platform: `linux/amd64` (for Intel compatibility).
-        *   Webserver Timeout: Increased to `300` (Gunicorn stability).
 
 3.  **Reset and Rebuild (Scorched Earth):**
     If you encountered previous setup issues, run this sequence to perform a clean image build from scratch:
