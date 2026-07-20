@@ -914,3 +914,17 @@ IndentationError: unexpected indent
 [2026-07-20T13:58:08.212+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:58:08.212+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2026-07-20T13:58:08.339+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:58:08.338+0000] {dag.py:3954} INFO - Setting next_dagrun for process_silver_layer to None, run_after=None
 [2026-07-20T13:58:08.501+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/silver_processing_dag.py took 0.705 seconds
+[2026-07-20T13:58:39.017+0000] {processor.py:161} INFO - Started process (PID=993) to work on /opt/airflow/dags/silver_processing_dag.py
+[2026-07-20T13:58:39.023+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/silver_processing_dag.py for tasks to queue
+[2026-07-20T13:58:39.725+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:58:39.723+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/silver_processing_dag.py
+[2026-07-20T13:58:41.403+0000] {processor.py:840} INFO - DAG(s) 'process_silver_layer' retrieved from /opt/airflow/dags/silver_processing_dag.py
+[2026-07-20T13:58:41.694+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:58:41.693+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-07-20T13:58:41.893+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:58:41.893+0000] {dag.py:3954} INFO - Setting next_dagrun for process_silver_layer to None, run_after=None
+[2026-07-20T13:58:43.931+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/silver_processing_dag.py took 4.945 seconds
+[2026-07-20T13:59:15.091+0000] {processor.py:161} INFO - Started process (PID=1003) to work on /opt/airflow/dags/silver_processing_dag.py
+[2026-07-20T13:59:15.094+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/silver_processing_dag.py for tasks to queue
+[2026-07-20T13:59:15.100+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:59:15.099+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/silver_processing_dag.py
+[2026-07-20T13:59:15.146+0000] {processor.py:840} INFO - DAG(s) 'process_silver_layer' retrieved from /opt/airflow/dags/silver_processing_dag.py
+[2026-07-20T13:59:15.211+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:59:15.210+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-07-20T13:59:15.248+0000] {logging_mixin.py:188} INFO - [2026-07-20T13:59:15.248+0000] {dag.py:3954} INFO - Setting next_dagrun for process_silver_layer to None, run_after=None
+[2026-07-20T13:59:15.346+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/silver_processing_dag.py took 0.290 seconds
