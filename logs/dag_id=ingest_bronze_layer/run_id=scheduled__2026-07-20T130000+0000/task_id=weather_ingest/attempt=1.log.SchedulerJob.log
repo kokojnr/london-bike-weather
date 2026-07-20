@@ -1,0 +1,1 @@
+[2026-07-20T14:00:48.748+0000] {scheduler_job_runner.py:769} ERROR - Executor reports task instance <TaskInstance: ingest_bronze_layer.weather_ingest scheduled__2026-07-20T13:00:00+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?
