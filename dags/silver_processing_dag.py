@@ -17,7 +17,7 @@ def setup_gcp_credentials(**kwargs):
     conn = BaseHook.get_connection('google_cloud_default')
     extra = json.loads(conn.extra)
     
-    # Depending on how it was pasted, it might be nested or a string
+    # Retrieve keyfile as json
     keyfile_dict = extra.get('keyfile_dict', extra)
     if isinstance(keyfile_dict, str):
         keyfile_dict = json.loads(keyfile_dict)
@@ -38,7 +38,7 @@ with DAG(
     'process_silver_layer',
     default_args=default_args,
     description='Run PySpark job to process Bronze data into Silver Parquet files',
-    schedule_interval=None, # For now, we will trigger this manually
+    schedule_interval=None, # trigger manually for the meantime
     catchup=False,
     tags=['silver', 'processing', 'spark'],
 ) as dag:
@@ -49,7 +49,7 @@ with DAG(
         python_callable=setup_gcp_credentials
     )
 
-    # We use GOOGLE_APPLICATION_CREDENTIALS to tell the Spark GCS Connector where to find the key we just made
+    # Use GOOGLE_APPLICATION_CREDENTIALS to tell the Spark GCS Connector where to find authentication key
     run_spark_task = BashOperator(
         task_id='run_silver_spark_job',
         bash_command=(
@@ -58,5 +58,5 @@ with DAG(
         )
     )
 
-    # Set dependencies (Extract Key -> Run Spark)
+
 prepare_key_task >> run_spark_task

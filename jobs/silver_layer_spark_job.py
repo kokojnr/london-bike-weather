@@ -25,7 +25,7 @@ def process_weather_data(spark, bucket_name):
         raw_weather_df = spark.read.json(bronze_path)
         
         
-        # JSON is heavily nested, so we select exactly what we need
+        # JSON is heavily nested retrieve only relevant information
         silver_weather_df = raw_weather_df.select(
             col("dt").cast("timestamp").alias("observation_time"),
             col("name").alias("city"),
@@ -57,8 +57,7 @@ def process_bike_data(spark, bucket_name):
         # TfL returns a massive array of JSON objects, Spark handles this natively
         raw_bike_df = spark.read.json(bronze_path)
         
-        # Extracting specific properties from the TfL nested 'additionalProperties' array
-        # This requires a bit of Spark SQL magic, but for now, we'll grab top-level items
+        # Get top level items for now, further processing required to grab additional properties
         silver_bike_df = raw_bike_df.select(
             col("id").alias("station_id"),
             col("commonName").alias("station_name"),
@@ -69,9 +68,7 @@ def process_bike_data(spark, bucket_name):
         
         silver_path = f"gs://{bucket_name}/silver/bike/"
         
-        silver_bike_df.write \
-            .mode("overwrite") \
-            .parquet(silver_path)
+        silver_bike_df.write.mode("overwrite").parquet(silver_path)
             
         print(f"Bike data processed and saved to {silver_path}")
         
@@ -79,7 +76,6 @@ def process_bike_data(spark, bucket_name):
         print(f"Error processing bike data: {e}")
 
 if __name__ == "__main__":
-    # We will pass the bucket name as an argument when we run the job
     if len(sys.argv) < 2:
         print("Usage: silver_processing.py <gcs_bucket_name>")
         sys.exit(1)
