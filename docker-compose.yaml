@@ -13,6 +13,7 @@ x-airflow-common: &airflow-common
     - ./plugins:/opt/airflow/plugins
     - ./src:/opt/airflow/src
     - ./data:/opt/airflow/data
+    - ./jobs:/opt/airflow/jobs
   user: "${AIRFLOW_UID:-50000}:0"
 
 services:

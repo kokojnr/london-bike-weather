@@ -1091,3 +1091,1126 @@ File Path                                  PID    Runtime      # DAGs    # Error
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
 /opt/airflow/dags/bronze_ingestion_dag.py                           1           0  0.60s           2026-07-19T13:08:09
 ================================================================================
+[2026-07-20T10:53:19.751+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2026-07-20T10:53:19.761+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-07-20T10:53:19.765+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-07-20T10:53:19.773+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T10:53:19.911+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T10:53:28.834+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           0           1  8.16s           2026-07-20T10:53:28
+/opt/airflow/dags/bronze_ingestion_dag.py     167  0.35s             0           0
+================================================================================
+[2026-07-20T10:54:00.283+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  4.82s           2026-07-20T10:53:33
+/opt/airflow/dags/silver_processing_dag.py                           0           1  0.35s           2026-07-20T10:53:59
+================================================================================
+[2026-07-20T10:54:30.879+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.54s           2026-07-20T10:54:06
+/opt/airflow/dags/silver_processing_dag.py                           0           1  0.18s           2026-07-20T10:54:30
+================================================================================
+[2026-07-20T10:55:02.694+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.32s           2026-07-20T10:54:37
+/opt/airflow/dags/silver_processing_dag.py                           0           1  0.22s           2026-07-20T10:55:00
+================================================================================
+[2026-07-20T10:55:33.955+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.41s           2026-07-20T10:55:08
+/opt/airflow/dags/silver_processing_dag.py                           0           1  0.18s           2026-07-20T10:55:31
+================================================================================
+[2026-07-20T10:55:26.813+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.42s           2026-07-20T10:55:41
+/opt/airflow/dags/silver_processing_dag.py                           0           1  0.27s           2026-07-20T10:56:01
+================================================================================
+[2026-07-20T10:56:41.864+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.39s           2026-07-20T10:56:12
+/opt/airflow/dags/silver_processing_dag.py                           0           1  0.15s           2026-07-20T10:56:31
+================================================================================
+[2026-07-20T10:57:12.805+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.54s           2026-07-20T10:56:44
+/opt/airflow/dags/silver_processing_dag.py                           0           1  0.44s           2026-07-20T10:57:02
+================================================================================
+[2026-07-20T10:57:45.994+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.78s           2026-07-20T10:57:34
+/opt/airflow/dags/bronze_ingestion_dag.py     249  0.02s             1           0  0.35s           2026-07-20T10:57:15
+================================================================================
+[2026-07-20T10:57:35.832+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.59s           2026-07-20T10:58:05
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.44s           2026-07-20T10:57:46
+================================================================================
+[2026-07-20T10:58:47.660+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T10:58:47.716+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T10:58:49.520+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.75s           2026-07-20T10:58:48
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.72s           2026-07-20T10:58:48
+================================================================================
+[2026-07-20T10:59:21.195+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.45s           2026-07-20T10:59:19
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.38s           2026-07-20T10:59:19
+================================================================================
+[2026-07-20T10:59:53.950+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.66s           2026-07-20T10:59:51
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.51s           2026-07-20T10:59:51
+================================================================================
+[2026-07-20T11:00:24.905+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.39s           2026-07-20T11:00:23
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.92s           2026-07-20T11:00:23
+================================================================================
+[2026-07-20T11:00:55.963+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.80s           2026-07-20T11:00:55
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.59s           2026-07-20T11:00:54
+================================================================================
+[2026-07-20T11:01:27.444+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.86s           2026-07-20T11:01:26
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.81s           2026-07-20T11:01:26
+================================================================================
+[2026-07-20T11:01:58.428+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.13s           2026-07-20T11:01:58
+/opt/airflow/dags/bronze_ingestion_dag.py     462  1.03s             1           0  0.86s           2026-07-20T11:01:26
+================================================================================
+[2026-07-20T11:02:30.129+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     472  1.07s             1           0  1.20s           2026-07-20T11:01:58
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.93s           2026-07-20T11:02:29
+================================================================================
+[2026-07-20T11:03:01.824+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.41s           2026-07-20T11:02:59
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.40s           2026-07-20T11:03:00
+================================================================================
+[2026-07-20T11:03:33.073+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.57s           2026-07-20T11:03:30
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.48s           2026-07-20T11:03:31
+================================================================================
+[2026-07-20T11:03:47.701+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T11:03:47.774+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T11:03:21.084+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.57s           2026-07-20T11:03:30
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.48s           2026-07-20T11:03:31
+================================================================================
+[2026-07-20T11:04:35.128+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.81s           2026-07-20T11:04:29
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.66s           2026-07-20T11:04:29
+================================================================================
+[2026-07-20T11:05:06.229+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.74s           2026-07-20T11:05:00
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.64s           2026-07-20T11:04:59
+================================================================================
+[2026-07-20T11:05:37.149+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.93s           2026-07-20T11:05:31
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.56s           2026-07-20T11:05:32
+================================================================================
+[2026-07-20T11:06:07.949+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.74s           2026-07-20T11:06:02
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.53s           2026-07-20T11:06:02
+================================================================================
+[2026-07-20T11:06:39.276+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.40s           2026-07-20T11:06:33
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.33s           2026-07-20T11:06:33
+================================================================================
+[2026-07-20T11:07:10.623+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.85s           2026-07-20T11:07:04
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.69s           2026-07-20T11:07:04
+================================================================================
+[2026-07-20T11:07:41.449+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.41s           2026-07-20T11:07:34
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.36s           2026-07-20T11:07:35
+================================================================================
+[2026-07-20T11:07:28.816+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.41s           2026-07-20T11:07:34
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.36s           2026-07-20T11:07:35
+================================================================================
+[2026-07-20T11:08:42.448+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.54s           2026-07-20T11:08:18
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.46s           2026-07-20T11:08:18
+================================================================================
+[2026-07-20T11:08:47.924+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T11:08:47.987+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T11:09:15.299+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.80s           2026-07-20T11:08:50
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.74s           2026-07-20T11:08:49
+================================================================================
+[2026-07-20T11:09:48.128+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.57s           2026-07-20T11:09:20
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.47s           2026-07-20T11:09:20
+================================================================================
+[2026-07-20T11:09:35.939+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.51s           2026-07-20T11:09:51
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.51s           2026-07-20T11:09:51
+================================================================================
+[2026-07-20T11:10:49.861+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.34s           2026-07-20T11:10:24
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.34s           2026-07-20T11:10:24
+================================================================================
+[2026-07-20T11:11:21.517+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.47s           2026-07-20T11:10:55
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.45s           2026-07-20T11:10:55
+================================================================================
+[2026-07-20T11:11:54.255+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.39s           2026-07-20T11:11:27
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.25s           2026-07-20T11:11:26
+================================================================================
+[2026-07-20T11:12:25.501+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.68s           2026-07-20T11:11:57
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.66s           2026-07-20T11:11:58
+================================================================================
+[2026-07-20T11:12:57.393+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.44s           2026-07-20T11:12:28
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.41s           2026-07-20T11:12:28
+================================================================================
+[2026-07-20T11:13:29.045+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.45s           2026-07-20T11:12:59
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.41s           2026-07-20T11:12:59
+================================================================================
+[2026-07-20T11:13:48.625+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T11:13:48.762+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T11:13:59.979+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.78s           2026-07-20T11:13:30
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.69s           2026-07-20T11:13:30
+================================================================================
+[2026-07-20T11:14:31.874+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     692  0.02s             1           0  0.37s           2026-07-20T11:14:01
+/opt/airflow/dags/silver_processing_dag.py    689  0.05s             1           0  0.35s           2026-07-20T11:14:01
+================================================================================
+[2026-07-20T11:15:03.025+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     702  0.03s             1           0  0.56s           2026-07-20T11:14:32
+/opt/airflow/dags/silver_processing_dag.py    699  0.11s             1           0  0.45s           2026-07-20T11:14:32
+================================================================================
+[2026-07-20T11:15:33.896+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    709  0.05s             1           0  0.76s           2026-07-20T11:15:03
+/opt/airflow/dags/bronze_ingestion_dag.py     711  0.02s             1           0  0.69s           2026-07-20T11:15:03
+================================================================================
+[2026-07-20T11:16:05.045+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    719  0.07s             1           0  0.64s           2026-07-20T11:15:34
+/opt/airflow/dags/bronze_ingestion_dag.py     722  0.02s             1           0  0.56s           2026-07-20T11:15:34
+================================================================================
+[2026-07-20T11:16:36.309+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    729  0.06s             1           0  0.68s           2026-07-20T11:16:05
+/opt/airflow/dags/bronze_ingestion_dag.py     732  0.03s             1           0  0.67s           2026-07-20T11:16:05
+================================================================================
+[2026-07-20T11:17:06.573+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.39s           2026-07-20T11:16:36
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.39s           2026-07-20T11:16:36
+================================================================================
+[2026-07-20T11:17:37.562+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.39s           2026-07-20T11:17:10
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.27s           2026-07-20T11:17:10
+================================================================================
+[2026-07-20T11:18:10.995+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.32s           2026-07-20T11:17:41
+/opt/airflow/dags/silver_processing_dag.py    759  0.02s             1           0  0.32s           2026-07-20T11:17:40
+================================================================================
+[2026-07-20T11:18:42.459+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     772  0.02s             1           0  0.56s           2026-07-20T11:18:11
+/opt/airflow/dags/silver_processing_dag.py    769  0.05s             1           0  0.52s           2026-07-20T11:18:11
+================================================================================
+[2026-07-20T11:18:49.101+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T11:18:49.153+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T11:19:12.525+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.55s           2026-07-20T11:18:42
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.52s           2026-07-20T11:18:42
+================================================================================
+[2026-07-20T11:19:44.833+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.38s           2026-07-20T11:19:44
+/opt/airflow/dags/bronze_ingestion_dag.py     792  0.36s             1           0  0.35s           2026-07-20T11:19:13
+================================================================================
+[2026-07-20T11:20:15.532+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.44s           2026-07-20T11:20:15
+/opt/airflow/dags/bronze_ingestion_dag.py     802  0.45s             1           0  0.40s           2026-07-20T11:19:44
+================================================================================
+[2026-07-20T11:20:46.666+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.58s           2026-07-20T11:20:46
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.55s           2026-07-20T11:20:46
+================================================================================
+[2026-07-20T11:21:18.065+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.61s           2026-07-20T11:21:17
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.28s           2026-07-20T11:21:17
+================================================================================
+[2026-07-20T11:25:31.565+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2026-07-20T11:25:31.585+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-07-20T11:25:31.591+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-07-20T11:25:31.594+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T11:25:31.777+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T11:25:38.291+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  5.75s           2026-07-20T11:25:37
+/opt/airflow/dags/bronze_ingestion_dag.py     165  0.37s             0           0
+================================================================================
+[2026-07-20T11:26:09.722+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    170  1.08s             1           0  5.75s           2026-07-20T11:25:37
+/opt/airflow/dags/bronze_ingestion_dag.py     173  0.03s             1           0  1.50s           2026-07-20T11:25:39
+================================================================================
+[2026-07-20T11:26:41.092+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  2.75s           2026-07-20T11:26:11
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.14s           2026-07-20T11:26:11
+================================================================================
+[2026-07-20T11:27:14.340+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.28s           2026-07-20T11:27:13
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.26s           2026-07-20T11:27:12
+================================================================================
+[2026-07-20T11:27:47.159+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.66s           2026-07-20T11:27:47
+/opt/airflow/dags/silver_processing_dag.py    200  2.81s             1           0  0.26s           2026-07-20T11:27:12
+================================================================================
+[2026-07-20T11:28:18.621+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    213  0.57s             1           0  3.28s           2026-07-20T11:27:47
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.96s           2026-07-20T11:28:18
+================================================================================
+[2026-07-20T11:28:49.640+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    220  0.21s             1           0  1.27s           2026-07-20T11:28:19
+/opt/airflow/dags/bronze_ingestion_dag.py     223  0.09s             1           0  0.96s           2026-07-20T11:28:18
+================================================================================
+[2026-07-20T11:29:22.765+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    230  0.07s             1           0  2.79s           2026-07-20T11:28:52
+/opt/airflow/dags/bronze_ingestion_dag.py     233  0.02s             1           0  2.62s           2026-07-20T11:28:52
+================================================================================
+[2026-07-20T11:29:54.332+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     243  0.01s             1           0  0.75s           2026-07-20T11:29:23
+/opt/airflow/dags/silver_processing_dag.py    240  0.05s             1           0  0.73s           2026-07-20T11:29:23
+================================================================================
+[2026-07-20T11:30:25.965+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    250  0.12s             1           0  0.66s           2026-07-20T11:29:54
+/opt/airflow/dags/bronze_ingestion_dag.py     253  0.03s             1           0  0.53s           2026-07-20T11:29:54
+================================================================================
+[2026-07-20T11:30:32.247+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T11:30:32.326+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T11:30:57.288+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     263  0.06s             1           0  1.14s           2026-07-20T11:30:27
+/opt/airflow/dags/silver_processing_dag.py    260  0.11s             1           0  0.85s           2026-07-20T11:30:26
+================================================================================
+[2026-07-20T11:31:28.184+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     273  0.04s             1           0  0.79s           2026-07-20T11:30:57
+/opt/airflow/dags/silver_processing_dag.py    270  0.10s             1           0  0.73s           2026-07-20T11:30:57
+================================================================================
+[2026-07-20T11:31:58.931+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.82s           2026-07-20T11:31:28
+/opt/airflow/dags/silver_processing_dag.py    280  0.01s             1           0  0.80s           2026-07-20T11:31:28
+================================================================================
+[2026-07-20T11:32:32.006+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.36s           2026-07-20T11:32:30
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.24s           2026-07-20T11:32:29
+================================================================================
+[2026-07-20T11:33:02.912+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.23s           2026-07-20T11:33:02
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.90s           2026-07-20T11:33:01
+================================================================================
+[2026-07-20T11:33:33.933+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.50s           2026-07-20T11:33:32
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.48s           2026-07-20T11:33:32
+================================================================================
+[2026-07-20T11:34:05.316+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.32s           2026-07-20T11:34:04
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.23s           2026-07-20T11:34:04
+================================================================================
+[2026-07-20T11:34:36.710+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.40s           2026-07-20T11:34:34
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.31s           2026-07-20T11:34:34
+================================================================================
+[2026-07-20T11:35:08.461+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.37s           2026-07-20T11:35:05
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.36s           2026-07-20T11:35:05
+================================================================================
+[2026-07-20T11:35:32.569+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T11:35:32.849+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T11:35:39.605+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.57s           2026-07-20T11:35:36
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.55s           2026-07-20T11:35:36
+================================================================================
+[2026-07-20T11:36:11.099+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.75s           2026-07-20T11:36:08
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.73s           2026-07-20T11:36:07
+================================================================================
+[2026-07-20T11:36:43.085+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.57s           2026-07-20T11:36:38
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.49s           2026-07-20T11:36:38
+================================================================================
+[2026-07-20T13:33:42.801+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2026-07-20T13:33:42.844+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-07-20T13:33:42.894+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-07-20T13:33:42.971+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T13:33:45.738+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T13:34:32.254+0000] {manager.py:452} INFO - Exiting gracefully upon receiving signal 15
+[2026-07-20T13:34:44.011+0000] {manager.py:470} INFO - Processing files using up to 2 processes at a time 
+[2026-07-20T13:34:44.014+0000] {manager.py:471} INFO - Process each file at most once every 30 seconds
+[2026-07-20T13:34:44.020+0000] {manager.py:472} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-07-20T13:34:44.024+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T13:34:44.117+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T13:34:56.818+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  12.21s          2026-07-20T13:34:56
+/opt/airflow/dags/bronze_ingestion_dag.py     176  0.30s             0           0
+================================================================================
+[2026-07-20T13:35:27.590+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    181  0.06s             1           0  12.21s          2026-07-20T13:34:56
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  9.86s           2026-07-20T13:35:06
+================================================================================
+[2026-07-20T13:35:59.327+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  3.59s           2026-07-20T13:35:41
+/opt/airflow/dags/silver_processing_dag.py    191  0.04s             1           0  1.52s           2026-07-20T13:35:29
+================================================================================
+[2026-07-20T13:36:30.310+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  8.77s           2026-07-20T13:36:20
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.66s           2026-07-20T13:36:00
+================================================================================
+[2026-07-20T13:37:00.878+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  8.22s           2026-07-20T13:36:59
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.26s           2026-07-20T13:36:32
+================================================================================
+[2026-07-20T13:37:32.363+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.69s           2026-07-20T13:37:31
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.15s           2026-07-20T13:37:03
+================================================================================
+[2026-07-20T13:38:03.225+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.13s           2026-07-20T13:37:35
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.53s           2026-07-20T13:38:02
+================================================================================
+[2026-07-20T13:37:52.640+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  4.82s           2026-07-20T13:38:11
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.53s           2026-07-20T13:38:02
+================================================================================
+[2026-07-20T13:39:06.245+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  13.11s          2026-07-20T13:38:59
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  13.11s          2026-07-20T13:38:59
+================================================================================
+[2026-07-20T13:39:37.245+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  3.02s           2026-07-20T13:39:32
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.72s           2026-07-20T13:39:33
+================================================================================
+[2026-07-20T13:39:44.419+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T13:39:44.550+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T13:40:08.344+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  2.44s           2026-07-20T13:40:05
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.30s           2026-07-20T13:40:05
+================================================================================
+[2026-07-20T13:40:39.486+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.91s           2026-07-20T13:40:36
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.85s           2026-07-20T13:40:36
+================================================================================
+[2026-07-20T13:41:12.784+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  3.46s           2026-07-20T13:41:10
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  3.31s           2026-07-20T13:41:10
+================================================================================
+[2026-07-20T13:41:43.874+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    286  2.66s             1           0  3.46s           2026-07-20T13:41:10
+/opt/airflow/dags/bronze_ingestion_dag.py     289  2.40s             1           0  3.31s           2026-07-20T13:41:10
+================================================================================
+[2026-07-20T13:42:15.884+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  4.85s           2026-07-20T13:41:46
+/opt/airflow/dags/silver_processing_dag.py                           1           0  4.84s           2026-07-20T13:41:45
+================================================================================
+[2026-07-20T13:42:46.835+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  3.28s           2026-07-20T13:42:19
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  3.00s           2026-07-20T13:42:20
+================================================================================
+[2026-07-20T13:43:17.554+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  2.50s           2026-07-20T13:42:52
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.28s           2026-07-20T13:42:52
+================================================================================
+[2026-07-20T13:43:50.337+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  8.57s           2026-07-20T13:43:31
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  6.94s           2026-07-20T13:43:31
+================================================================================
+[2026-07-20T13:44:21.858+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  3.10s           2026-07-20T13:44:05
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.99s           2026-07-20T13:44:05
+================================================================================
+[2026-07-20T13:44:11.409+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  3.78s           2026-07-20T13:44:39
+/opt/airflow/dags/silver_processing_dag.py                           1           0  3.45s           2026-07-20T13:44:38
+================================================================================
+[2026-07-20T13:45:01.733+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T13:45:02.468+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T13:45:25.098+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  7.84s           2026-07-20T13:45:17
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  7.70s           2026-07-20T13:45:18
+================================================================================
+[2026-07-20T13:45:56.903+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  5.39s           2026-07-20T13:45:54
+/opt/airflow/dags/silver_processing_dag.py                           1           0  3.61s           2026-07-20T13:45:51
+================================================================================
+[2026-07-20T13:46:27.941+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py     613  2.29s             1           0  5.39s           2026-07-20T13:45:54
+/opt/airflow/dags/silver_processing_dag.py    610  5.51s             1           0  3.61s           2026-07-20T13:45:51
+================================================================================
+[2026-07-20T13:46:59.342+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py    635  0.06s             1           0  5.85s           2026-07-20T13:46:28
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  5.38s           2026-07-20T13:46:31
+================================================================================
+[2026-07-20T13:47:30.169+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  2.03s           2026-07-20T13:47:01
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.90s           2026-07-20T13:47:03
+================================================================================
+[2026-07-20T13:48:00.986+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  10.10s          2026-07-20T13:47:42
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  9.71s           2026-07-20T13:47:43
+================================================================================
+[2026-07-20T13:48:32.353+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.59s           2026-07-20T13:48:15
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.45s           2026-07-20T13:48:13
+================================================================================
+[2026-07-20T13:49:03.327+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.71s           2026-07-20T13:48:46
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.68s           2026-07-20T13:48:45
+================================================================================
+[2026-07-20T13:49:34.434+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.46s           2026-07-20T13:49:17
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.32s           2026-07-20T13:49:15
+================================================================================
+[2026-07-20T13:50:02.389+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T13:50:02.487+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T13:50:07.635+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.98s           2026-07-20T13:49:48
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.86s           2026-07-20T13:49:47
+================================================================================
+[2026-07-20T13:50:43.250+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.42s           2026-07-20T13:50:19
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.36s           2026-07-20T13:50:18
+================================================================================
+[2026-07-20T13:51:14.561+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.98s           2026-07-20T13:50:49
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.51s           2026-07-20T13:50:50
+================================================================================
+[2026-07-20T13:51:45.564+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.22s           2026-07-20T13:51:21
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.12s           2026-07-20T13:51:20
+================================================================================
+[2026-07-20T13:52:18.912+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.52s           2026-07-20T13:51:52
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.43s           2026-07-20T13:51:52
+================================================================================
+[2026-07-20T13:52:50.091+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.84s           2026-07-20T13:52:23
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.81s           2026-07-20T13:52:23
+================================================================================
+[2026-07-20T13:53:21.176+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.49s           2026-07-20T13:52:53
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.39s           2026-07-20T13:52:55
+================================================================================
+[2026-07-20T13:53:54.257+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.92s           2026-07-20T13:53:25
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.85s           2026-07-20T13:53:26
+================================================================================
+[2026-07-20T13:54:25.629+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.33s           2026-07-20T13:53:57
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.86s           2026-07-20T13:53:56
+================================================================================
+[2026-07-20T13:54:56.964+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.52s           2026-07-20T13:54:30
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.69s           2026-07-20T13:54:28
+================================================================================
+[2026-07-20T13:55:02.815+0000] {manager.py:737} INFO - Searching for files in /opt/airflow/dags
+[2026-07-20T13:55:03.185+0000] {manager.py:740} INFO - There are 2 files in /opt/airflow/dags
+[2026-07-20T13:55:28.186+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  2.23s           2026-07-20T13:55:03
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.17s           2026-07-20T13:55:00
+================================================================================
+[2026-07-20T13:55:58.859+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.46s           2026-07-20T13:55:34
+/opt/airflow/dags/silver_processing_dag.py                           1           0  0.38s           2026-07-20T13:55:30
+================================================================================
+[2026-07-20T13:56:33.002+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.13s           2026-07-20T13:56:05
+/opt/airflow/dags/silver_processing_dag.py    953  0.05s             1           0  1.05s           2026-07-20T13:56:02
+================================================================================
+[2026-07-20T13:57:03.938+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/silver_processing_dag.py                           1           0  1.69s           2026-07-20T13:56:34
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  1.25s           2026-07-20T13:56:36
+================================================================================
+[2026-07-20T13:57:37.024+0000] {manager.py:878} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/bronze_ingestion_dag.py                            1           0  0.92s           2026-07-20T13:57:07
+/opt/airflow/dags/silver_processing_dag.py    973  1.22s             1           0  0.56s           2026-07-20T13:57:05
+================================================================================
