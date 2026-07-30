@@ -1,0 +1,281 @@
+[2026-07-28T22:15:09.485+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-28T22:15:09.574+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_gold_layer.run_gold_spark_job manual__2026-07-28T22:15:07.775335+00:00 [queued]>
+[2026-07-28T22:15:09.601+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_gold_layer.run_gold_spark_job manual__2026-07-28T22:15:07.775335+00:00 [queued]>
+[2026-07-28T22:15:09.620+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2026-07-28T22:15:09.740+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_gold_spark_job> on 2026-07-28 22:15:07.775335+00:00
+[2026-07-28T22:15:09.768+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'process_gold_layer', 'run_gold_spark_job', 'manual__2026-07-28T22:15:07.775335+00:00', '--job-id', '177', '--raw', '--subdir', 'DAGS_FOLDER/gold_processing_dag.py', '--cfg-path', '/tmp/tmp3rshtyvq']
+[2026-07-28T22:15:09.777+0000] {standard_task_runner.py:91} INFO - Job 177: Subtask run_gold_spark_job
+[2026-07-28T22:15:09.789+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=9152) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-28T22:15:09.794+0000] {standard_task_runner.py:63} INFO - Started process 9153 to run task
+[2026-07-28T22:15:09.967+0000] {task_command.py:426} INFO - Running <TaskInstance: process_gold_layer.run_gold_spark_job manual__2026-07-28T22:15:07.775335+00:00 [running]> on host 21f1a12a00bc
+[2026-07-28T22:15:10.327+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='process_gold_layer' AIRFLOW_CTX_TASK_ID='run_gold_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2026-07-28T22:15:07.775335+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-28T22:15:07.775335+00:00'
+[2026-07-28T22:15:10.332+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-28T22:15:10.389+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-28T22:15:10.401+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'export GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp_key.json && python /opt/***/jobs/gold_layer_spark_job.py london_bike_data_bronze london-bike-502619']
+[2026-07-28T22:15:10.431+0000] {subprocess.py:86} INFO - Output:
+[2026-07-28T22:15:12.557+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.12/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2026-07-28T22:15:18.338+0000] {subprocess.py:93} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.12/site-packages/pyspark/jars/ivy-2.5.1.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2026-07-28T22:15:18.694+0000] {subprocess.py:93} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2026-07-28T22:15:18.704+0000] {subprocess.py:93} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2026-07-28T22:15:18.715+0000] {subprocess.py:93} INFO - com.google.cloud.bigdataoss#gcs-connector added as a dependency
+[2026-07-28T22:15:18.719+0000] {subprocess.py:93} INFO - com.google.cloud.spark#spark-bigquery-with-dependencies_2.12 added as a dependency
+[2026-07-28T22:15:18.721+0000] {subprocess.py:93} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-ea68e85e-66b8-4dad-8a55-df411a3c9273;1.0
+[2026-07-28T22:15:18.725+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-07-28T22:15:19.163+0000] {subprocess.py:93} INFO - 	found com.google.cloud.bigdataoss#gcs-connector;hadoop3-2.2.22 in central
+[2026-07-28T22:15:19.284+0000] {subprocess.py:93} INFO - 	found com.google.api-client#google-api-client-jackson2;2.0.1 in central
+[2026-07-28T22:15:19.388+0000] {subprocess.py:93} INFO - 	found com.google.api-client#google-api-client;2.0.1 in central
+[2026-07-28T22:15:19.487+0000] {subprocess.py:93} INFO - 	found com.google.oauth-client#google-oauth-client;1.34.1 in central
+[2026-07-28T22:15:19.620+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client;1.42.3 in central
+[2026-07-28T22:15:19.824+0000] {subprocess.py:93} INFO - 	found org.apache.httpcomponents#httpclient;4.5.13 in central
+[2026-07-28T22:15:19.914+0000] {subprocess.py:93} INFO - 	found org.apache.httpcomponents#httpcore;4.4.15 in central
+[2026-07-28T22:15:20.004+0000] {subprocess.py:93} INFO - 	found commons-logging#commons-logging;1.2 in central
+[2026-07-28T22:15:20.109+0000] {subprocess.py:93} INFO - 	found commons-codec#commons-codec;1.15 in central
+[2026-07-28T22:15:20.189+0000] {subprocess.py:93} INFO - 	found com.google.code.findbugs#jsr305;3.0.2 in central
+[2026-07-28T22:15:20.243+0000] {subprocess.py:93} INFO - 	found com.google.errorprone#error_prone_annotations;2.16 in central
+[2026-07-28T22:15:20.352+0000] {subprocess.py:93} INFO - 	found com.google.guava#guava;33.1.0-jre in central
+[2026-07-28T22:15:20.444+0000] {subprocess.py:93} INFO - 	found com.google.guava#failureaccess;1.0.2 in central
+[2026-07-28T22:15:20.486+0000] {subprocess.py:93} INFO - 	found com.google.guava#listenablefuture;9999.0-empty-to-avoid-conflict-with-guava in central
+[2026-07-28T22:15:20.539+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-qual;3.42.0 in central
+[2026-07-28T22:15:20.596+0000] {subprocess.py:93} INFO - 	found com.google.j2objc#j2objc-annotations;1.3 in central
+[2026-07-28T22:15:20.640+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-api;0.31.1 in central
+[2026-07-28T22:15:20.682+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-context;1.62.2 in central
+[2026-07-28T22:15:20.728+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-contrib-http-util;0.31.1 in central
+[2026-07-28T22:15:20.770+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client-gson;1.42.3 in central
+[2026-07-28T22:15:20.825+0000] {subprocess.py:93} INFO - 	found com.google.code.gson#gson;2.8.9 in central
+[2026-07-28T22:15:20.877+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-api;1.62.2 in central
+[2026-07-28T22:15:20.928+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client-apache-v2;1.42.3 in central
+[2026-07-28T22:15:21.018+0000] {subprocess.py:93} INFO - 	found com.google.cloud.bigdataoss#util;2.2.22 in central
+[2026-07-28T22:15:21.058+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client-jackson2;1.42.3 in central
+[2026-07-28T22:15:21.102+0000] {subprocess.py:93} INFO - 	found com.fasterxml.jackson.core#jackson-core;2.13.4 in central
+[2026-07-28T22:15:21.139+0000] {subprocess.py:93} INFO - 	found com.google.apis#google-api-services-iamcredentials;v1-rev20211203-2.0.0 in central
+[2026-07-28T22:15:21.175+0000] {subprocess.py:93} INFO - 	found com.google.apis#google-api-services-storage;v1-rev20240105-2.0.0 in central
+[2026-07-28T22:15:21.272+0000] {subprocess.py:93} INFO - 	found com.google.api-client#google-api-client;2.2.0 in central
+[2026-07-28T22:15:21.354+0000] {subprocess.py:93} INFO - 	found org.apache.httpcomponents#httpcore;4.4.16 in central
+[2026-07-28T22:15:21.390+0000] {subprocess.py:93} INFO - 	found com.google.auto.value#auto-value-annotations;1.10.4 in central
+[2026-07-28T22:15:21.413+0000] {subprocess.py:93} INFO - 	found com.google.auth#google-auth-library-oauth2-http;1.22.0 in central
+[2026-07-28T22:15:21.455+0000] {subprocess.py:93} INFO - 	found com.google.auth#google-auth-library-credentials;1.22.0 in central
+[2026-07-28T22:15:21.488+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client;1.43.3 in central
+[2026-07-28T22:15:21.545+0000] {subprocess.py:93} INFO - 	found com.google.errorprone#error_prone_annotations;2.18.0 in central
+[2026-07-28T22:15:21.598+0000] {subprocess.py:93} INFO - 	found com.google.j2objc#j2objc-annotations;2.8 in central
+[2026-07-28T22:15:21.651+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client-gson;1.43.3 in central
+[2026-07-28T22:15:21.694+0000] {subprocess.py:93} INFO - 	found com.google.flogger#google-extensions;0.7.1 in central
+[2026-07-28T22:15:21.729+0000] {subprocess.py:93} INFO - 	found com.google.flogger#flogger;0.7.1 in central
+[2026-07-28T22:15:21.771+0000] {subprocess.py:93} INFO - 	found org.checkerframework#checker-compat-qual;2.5.3 in central
+[2026-07-28T22:15:21.811+0000] {subprocess.py:93} INFO - 	found com.google.flogger#flogger-system-backend;0.7.1 in central
+[2026-07-28T22:15:21.860+0000] {subprocess.py:93} INFO - 	found com.google.cloud.bigdataoss#util-hadoop;hadoop3-2.2.22 in central
+[2026-07-28T22:15:21.905+0000] {subprocess.py:93} INFO - 	found com.google.cloud.bigdataoss#gcsio;2.2.22 in central
+[2026-07-28T22:15:21.974+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-alts;1.62.2 in central
+[2026-07-28T22:15:22.011+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-auth;1.62.2 in central
+[2026-07-28T22:15:22.046+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-core;1.62.2 in central
+[2026-07-28T22:15:22.074+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-grpclb;1.62.2 in central
+[2026-07-28T22:15:22.115+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-protobuf;1.62.2 in central
+[2026-07-28T22:15:22.151+0000] {subprocess.py:93} INFO - 	found com.google.protobuf#protobuf-java;3.25.3 in central
+[2026-07-28T22:15:22.188+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#proto-google-common-protos;2.29.0 in central
+[2026-07-28T22:15:22.235+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-stub;1.62.2 in central
+[2026-07-28T22:15:22.272+0000] {subprocess.py:93} INFO - 	found org.conscrypt#conscrypt-openjdk-uber;2.5.2 in central
+[2026-07-28T22:15:22.313+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-netty-shaded;1.62.2 in central
+[2026-07-28T22:15:22.388+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-census;1.62.2 in central
+[2026-07-28T22:15:22.490+0000] {subprocess.py:93} INFO - 	found com.google.cloud#google-cloud-storage;2.37.0 in central
+[2026-07-28T22:15:22.656+0000] {subprocess.py:93} INFO - 	found com.google.errorprone#error_prone_annotations;2.26.1 in central
+[2026-07-28T22:15:22.692+0000] {subprocess.py:93} INFO - 	found com.google.j2objc#j2objc-annotations;3.0.0 in central
+[2026-07-28T22:15:22.725+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client;1.44.1 in central
+[2026-07-28T22:15:22.775+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client-gson;1.44.1 in central
+[2026-07-28T22:15:22.805+0000] {subprocess.py:93} INFO - 	found com.google.api-client#google-api-client;2.4.0 in central
+[2026-07-28T22:15:22.841+0000] {subprocess.py:93} INFO - 	found commons-codec#commons-codec;1.16.1 in central
+[2026-07-28T22:15:22.888+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client-apache-v2;1.44.1 in central
+[2026-07-28T22:15:22.944+0000] {subprocess.py:93} INFO - 	found com.google.cloud#google-cloud-core;2.5.4 in central
+[2026-07-28T22:15:23.007+0000] {subprocess.py:93} INFO - 	found com.google.protobuf#protobuf-java-util;3.25.3 in central
+[2026-07-28T22:15:23.078+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#proto-google-iam-v1;1.1.7 in central
+[2026-07-28T22:15:23.203+0000] {subprocess.py:93} INFO - 	found com.google.cloud#google-cloud-core-http;2.37.0 in central
+[2026-07-28T22:15:23.250+0000] {subprocess.py:93} INFO - 	found com.google.http-client#google-http-client-appengine;1.44.1 in central
+[2026-07-28T22:15:23.300+0000] {subprocess.py:93} INFO - 	found com.google.api#gax-httpjson;2.47.0 in central
+[2026-07-28T22:15:23.372+0000] {subprocess.py:93} INFO - 	found com.google.cloud#google-cloud-core-grpc;2.37.0 in central
+[2026-07-28T22:15:23.422+0000] {subprocess.py:93} INFO - 	found com.google.api#gax;2.47.0 in central
+[2026-07-28T22:15:23.567+0000] {subprocess.py:93} INFO - 	found io.opentelemetry#opentelemetry-api;1.37.0 in central
+[2026-07-28T22:15:23.661+0000] {subprocess.py:93} INFO - 	found io.opentelemetry#opentelemetry-context;1.37.0 in central
+[2026-07-28T22:15:23.744+0000] {subprocess.py:93} INFO - 	found com.google.api#gax-grpc;2.42.0 in central
+[2026-07-28T22:15:24.011+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-inprocess;1.62.2 in central
+[2026-07-28T22:15:24.070+0000] {subprocess.py:93} INFO - 	found com.google.api#api-common;2.30.0 in central
+[2026-07-28T22:15:24.118+0000] {subprocess.py:93} INFO - 	found javax.annotation#javax.annotation-api;1.3.2 in central
+[2026-07-28T22:15:24.160+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#proto-google-common-protos;2.38.0 in central
+[2026-07-28T22:15:24.187+0000] {subprocess.py:93} INFO - 	found org.threeten#threetenbp;1.6.9 in central
+[2026-07-28T22:15:24.236+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#proto-google-cloud-storage-v2;2.37.0-alpha in central
+[2026-07-28T22:15:24.270+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#grpc-google-cloud-storage-v2;2.37.0-alpha in central
+[2026-07-28T22:15:24.368+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#gapic-google-cloud-storage-v2;2.37.0-alpha in central
+[2026-07-28T22:15:24.408+0000] {subprocess.py:93} INFO - 	found com.fasterxml.jackson.core#jackson-core;2.17.0 in central
+[2026-07-28T22:15:24.510+0000] {subprocess.py:93} INFO - 	found com.google.cloud#google-cloud-storage-control;2.37.0-alpha in central
+[2026-07-28T22:15:24.634+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#proto-google-cloud-storage-control-v2;2.37.0-alpha in central
+[2026-07-28T22:15:24.900+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-xds;1.62.2 in central
+[2026-07-28T22:15:25.012+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-proto;0.2.0 in central
+[2026-07-28T22:15:25.073+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-util;1.62.2 in central
+[2026-07-28T22:15:25.135+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-services;1.62.2 in central
+[2026-07-28T22:15:25.194+0000] {subprocess.py:93} INFO - 	found com.google.re2j#re2j;1.7 in central
+[2026-07-28T22:15:25.250+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-impl;0.31.0 in central
+[2026-07-28T22:15:25.289+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-impl-core;0.31.0 in central
+[2026-07-28T22:15:25.337+0000] {subprocess.py:93} INFO - 	found com.lmax#disruptor;3.4.2 in central
+[2026-07-28T22:15:25.377+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-exporter-stats-stackdriver;0.31.0 in central
+[2026-07-28T22:15:25.460+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-contrib-exemplar-util;0.31.0 in central
+[2026-07-28T22:15:25.490+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-contrib-resource-util;0.31.0 in central
+[2026-07-28T22:15:25.560+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-exporter-metrics-util;0.31.0 in central
+[2026-07-28T22:15:25.623+0000] {subprocess.py:93} INFO - 	found com.google.cloud#google-cloud-monitoring;1.82.0 in central
+[2026-07-28T22:15:25.721+0000] {subprocess.py:93} INFO - 	found com.google.api.grpc#proto-google-cloud-monitoring-v3;1.64.0 in central
+[2026-07-28T22:15:25.794+0000] {subprocess.py:93} INFO - 	found io.opencensus#opencensus-contrib-grpc-metrics;0.31.0 in central
+[2026-07-28T22:14:28.970+0000] {subprocess.py:93} INFO - 	found com.google.android#annotations;4.1.1.4 in central
+[2026-07-28T22:14:29.058+0000] {subprocess.py:93} INFO - 	found org.codehaus.mojo#animal-sniffer-annotations;1.23 in central
+[2026-07-28T22:14:29.160+0000] {subprocess.py:93} INFO - 	found io.perfmark#perfmark-api;0.26.0 in central
+[2026-07-28T22:15:26.880+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-protobuf-lite;1.62.2 in central
+[2026-07-28T22:15:27.339+0000] {subprocess.py:93} INFO - 	found io.perfmark#perfmark-api;0.27.0 in central
+[2026-07-28T22:15:27.444+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-googleapis;1.62.2 in central
+[2026-07-28T22:15:27.737+0000] {subprocess.py:93} INFO - 	found io.grpc#grpc-rls;1.62.2 in central
+[2026-07-28T22:15:27.830+0000] {subprocess.py:93} INFO - 	found com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.34.0 in central
+[2026-07-28T22:15:28.357+0000] {subprocess.py:93} INFO - :: resolution report :: resolve 9272ms :: artifacts dl 363ms
+[2026-07-28T22:15:28.359+0000] {subprocess.py:93} INFO - 	:: modules in use:
+[2026-07-28T22:15:28.380+0000] {subprocess.py:93} INFO - 	com.fasterxml.jackson.core#jackson-core;2.17.0 from central in [default]
+[2026-07-28T22:15:28.417+0000] {subprocess.py:93} INFO - 	com.google.android#annotations;4.1.1.4 from central in [default]
+[2026-07-28T22:15:28.434+0000] {subprocess.py:93} INFO - 	com.google.api#api-common;2.30.0 from central in [default]
+[2026-07-28T22:15:28.452+0000] {subprocess.py:93} INFO - 	com.google.api#gax;2.47.0 from central in [default]
+[2026-07-28T22:15:28.464+0000] {subprocess.py:93} INFO - 	com.google.api#gax-grpc;2.42.0 from central in [default]
+[2026-07-28T22:15:28.468+0000] {subprocess.py:93} INFO - 	com.google.api#gax-httpjson;2.47.0 from central in [default]
+[2026-07-28T22:15:28.484+0000] {subprocess.py:93} INFO - 	com.google.api-client#google-api-client;2.4.0 from central in [default]
+[2026-07-28T22:15:28.486+0000] {subprocess.py:93} INFO - 	com.google.api-client#google-api-client-jackson2;2.0.1 from central in [default]
+[2026-07-28T22:15:28.501+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#gapic-google-cloud-storage-v2;2.37.0-alpha from central in [default]
+[2026-07-28T22:15:28.505+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#grpc-google-cloud-storage-v2;2.37.0-alpha from central in [default]
+[2026-07-28T22:15:28.557+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-cloud-monitoring-v3;1.64.0 from central in [default]
+[2026-07-28T22:15:28.582+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-cloud-storage-control-v2;2.37.0-alpha from central in [default]
+[2026-07-28T22:15:28.625+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-cloud-storage-v2;2.37.0-alpha from central in [default]
+[2026-07-28T22:15:28.657+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-common-protos;2.38.0 from central in [default]
+[2026-07-28T22:15:28.694+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-iam-v1;1.1.7 from central in [default]
+[2026-07-28T22:15:28.723+0000] {subprocess.py:93} INFO - 	com.google.apis#google-api-services-iamcredentials;v1-rev20211203-2.0.0 from central in [default]
+[2026-07-28T22:15:28.757+0000] {subprocess.py:93} INFO - 	com.google.apis#google-api-services-storage;v1-rev20240105-2.0.0 from central in [default]
+[2026-07-28T22:15:28.787+0000] {subprocess.py:93} INFO - 	com.google.auth#google-auth-library-credentials;1.22.0 from central in [default]
+[2026-07-28T22:15:28.799+0000] {subprocess.py:93} INFO - 	com.google.auth#google-auth-library-oauth2-http;1.22.0 from central in [default]
+[2026-07-28T22:15:28.823+0000] {subprocess.py:93} INFO - 	com.google.auto.value#auto-value-annotations;1.10.4 from central in [default]
+[2026-07-28T22:15:28.826+0000] {subprocess.py:93} INFO - 	com.google.cloud#google-cloud-core;2.5.4 from central in [default]
+[2026-07-28T22:15:28.856+0000] {subprocess.py:93} INFO - 	com.google.cloud#google-cloud-core-grpc;2.37.0 from central in [default]
+[2026-07-28T22:15:28.863+0000] {subprocess.py:93} INFO - 	com.google.cloud#google-cloud-core-http;2.37.0 from central in [default]
+[2026-07-28T22:15:28.890+0000] {subprocess.py:93} INFO - 	com.google.cloud#google-cloud-monitoring;1.82.0 from central in [default]
+[2026-07-28T22:15:28.898+0000] {subprocess.py:93} INFO - 	com.google.cloud#google-cloud-storage;2.37.0 from central in [default]
+[2026-07-28T22:15:28.901+0000] {subprocess.py:93} INFO - 	com.google.cloud#google-cloud-storage-control;2.37.0-alpha from central in [default]
+[2026-07-28T22:15:28.921+0000] {subprocess.py:93} INFO - 	com.google.cloud.bigdataoss#gcs-connector;hadoop3-2.2.22 from central in [default]
+[2026-07-28T22:15:28.938+0000] {subprocess.py:93} INFO - 	com.google.cloud.bigdataoss#gcsio;2.2.22 from central in [default]
+[2026-07-28T22:15:28.967+0000] {subprocess.py:93} INFO - 	com.google.cloud.bigdataoss#util;2.2.22 from central in [default]
+[2026-07-28T22:15:28.981+0000] {subprocess.py:93} INFO - 	com.google.cloud.bigdataoss#util-hadoop;hadoop3-2.2.22 from central in [default]
+[2026-07-28T22:15:29.028+0000] {subprocess.py:93} INFO - 	com.google.cloud.spark#spark-bigquery-with-dependencies_2.12;0.34.0 from central in [default]
+[2026-07-28T22:15:29.049+0000] {subprocess.py:93} INFO - 	com.google.code.findbugs#jsr305;3.0.2 from central in [default]
+[2026-07-28T22:15:29.073+0000] {subprocess.py:93} INFO - 	com.google.code.gson#gson;2.8.9 from central in [default]
+[2026-07-28T22:15:29.088+0000] {subprocess.py:93} INFO - 	com.google.errorprone#error_prone_annotations;2.26.1 from central in [default]
+[2026-07-28T22:15:29.102+0000] {subprocess.py:93} INFO - 	com.google.flogger#flogger;0.7.1 from central in [default]
+[2026-07-28T22:15:29.123+0000] {subprocess.py:93} INFO - 	com.google.flogger#flogger-system-backend;0.7.1 from central in [default]
+[2026-07-28T22:15:29.133+0000] {subprocess.py:93} INFO - 	com.google.flogger#google-extensions;0.7.1 from central in [default]
+[2026-07-28T22:15:29.143+0000] {subprocess.py:93} INFO - 	com.google.guava#failureaccess;1.0.2 from central in [default]
+[2026-07-28T22:15:29.170+0000] {subprocess.py:93} INFO - 	com.google.guava#guava;33.1.0-jre from central in [default]
+[2026-07-28T22:15:29.193+0000] {subprocess.py:93} INFO - 	com.google.guava#listenablefuture;9999.0-empty-to-avoid-conflict-with-guava from central in [default]
+[2026-07-28T22:15:29.221+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client;1.44.1 from central in [default]
+[2026-07-28T22:15:29.250+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-apache-v2;1.44.1 from central in [default]
+[2026-07-28T22:15:29.280+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-appengine;1.44.1 from central in [default]
+[2026-07-28T22:15:29.301+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-gson;1.44.1 from central in [default]
+[2026-07-28T22:15:29.314+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-jackson2;1.42.3 from central in [default]
+[2026-07-28T22:15:29.321+0000] {subprocess.py:93} INFO - 	com.google.j2objc#j2objc-annotations;3.0.0 from central in [default]
+[2026-07-28T22:15:29.349+0000] {subprocess.py:93} INFO - 	com.google.oauth-client#google-oauth-client;1.34.1 from central in [default]
+[2026-07-28T22:15:29.371+0000] {subprocess.py:93} INFO - 	com.google.protobuf#protobuf-java;3.25.3 from central in [default]
+[2026-07-28T22:15:29.387+0000] {subprocess.py:93} INFO - 	com.google.protobuf#protobuf-java-util;3.25.3 from central in [default]
+[2026-07-28T22:15:29.392+0000] {subprocess.py:93} INFO - 	com.google.re2j#re2j;1.7 from central in [default]
+[2026-07-28T22:15:29.396+0000] {subprocess.py:93} INFO - 	com.lmax#disruptor;3.4.2 from central in [default]
+[2026-07-28T22:15:29.398+0000] {subprocess.py:93} INFO - 	commons-codec#commons-codec;1.16.1 from central in [default]
+[2026-07-28T22:15:29.411+0000] {subprocess.py:93} INFO - 	commons-logging#commons-logging;1.2 from central in [default]
+[2026-07-28T22:15:29.413+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-alts;1.62.2 from central in [default]
+[2026-07-28T22:15:29.416+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-api;1.62.2 from central in [default]
+[2026-07-28T22:15:29.431+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-auth;1.62.2 from central in [default]
+[2026-07-28T22:15:29.436+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-census;1.62.2 from central in [default]
+[2026-07-28T22:15:29.455+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-context;1.62.2 from central in [default]
+[2026-07-28T22:15:29.473+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-core;1.62.2 from central in [default]
+[2026-07-28T22:15:29.502+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-googleapis;1.62.2 from central in [default]
+[2026-07-28T22:15:29.509+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-grpclb;1.62.2 from central in [default]
+[2026-07-28T22:15:29.513+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-inprocess;1.62.2 from central in [default]
+[2026-07-28T22:15:29.527+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-netty-shaded;1.62.2 from central in [default]
+[2026-07-28T22:15:29.537+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-protobuf;1.62.2 from central in [default]
+[2026-07-28T22:15:29.544+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-protobuf-lite;1.62.2 from central in [default]
+[2026-07-28T22:15:29.556+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-rls;1.62.2 from central in [default]
+[2026-07-28T22:15:29.560+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-services;1.62.2 from central in [default]
+[2026-07-28T22:15:29.565+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-stub;1.62.2 from central in [default]
+[2026-07-28T22:15:29.584+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-util;1.62.2 from central in [default]
+[2026-07-28T22:15:29.608+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-xds;1.62.2 from central in [default]
+[2026-07-28T22:15:29.617+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-api;0.31.1 from central in [default]
+[2026-07-28T22:15:29.631+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-contrib-exemplar-util;0.31.0 from central in [default]
+[2026-07-28T22:15:29.635+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-contrib-grpc-metrics;0.31.0 from central in [default]
+[2026-07-28T22:15:29.647+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-contrib-http-util;0.31.1 from central in [default]
+[2026-07-28T22:15:29.652+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-contrib-resource-util;0.31.0 from central in [default]
+[2026-07-28T22:15:29.663+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-exporter-metrics-util;0.31.0 from central in [default]
+[2026-07-28T22:15:29.666+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-exporter-stats-stackdriver;0.31.0 from central in [default]
+[2026-07-28T22:15:29.668+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-impl;0.31.0 from central in [default]
+[2026-07-28T22:15:29.671+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-impl-core;0.31.0 from central in [default]
+[2026-07-28T22:15:29.682+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-proto;0.2.0 from central in [default]
+[2026-07-28T22:15:29.698+0000] {subprocess.py:93} INFO - 	io.opentelemetry#opentelemetry-api;1.37.0 from central in [default]
+[2026-07-28T22:15:29.702+0000] {subprocess.py:93} INFO - 	io.opentelemetry#opentelemetry-context;1.37.0 from central in [default]
+[2026-07-28T22:15:29.704+0000] {subprocess.py:93} INFO - 	io.perfmark#perfmark-api;0.27.0 from central in [default]
+[2026-07-28T22:15:29.706+0000] {subprocess.py:93} INFO - 	javax.annotation#javax.annotation-api;1.3.2 from central in [default]
+[2026-07-28T22:15:29.714+0000] {subprocess.py:93} INFO - 	org.apache.httpcomponents#httpclient;4.5.13 from central in [default]
+[2026-07-28T22:15:29.717+0000] {subprocess.py:93} INFO - 	org.apache.httpcomponents#httpcore;4.4.16 from central in [default]
+[2026-07-28T22:15:29.721+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-compat-qual;2.5.3 from central in [default]
+[2026-07-28T22:15:29.729+0000] {subprocess.py:93} INFO - 	org.checkerframework#checker-qual;3.42.0 from central in [default]
+[2026-07-28T22:15:29.732+0000] {subprocess.py:93} INFO - 	org.codehaus.mojo#animal-sniffer-annotations;1.23 from central in [default]
+[2026-07-28T22:15:29.734+0000] {subprocess.py:93} INFO - 	org.conscrypt#conscrypt-openjdk-uber;2.5.2 from central in [default]
+[2026-07-28T22:15:29.737+0000] {subprocess.py:93} INFO - 	org.threeten#threetenbp;1.6.9 from central in [default]
+[2026-07-28T22:15:29.744+0000] {subprocess.py:93} INFO - 	:: evicted modules:
+[2026-07-28T22:15:29.746+0000] {subprocess.py:93} INFO - 	com.google.api-client#google-api-client;2.0.1 by [com.google.api-client#google-api-client;2.2.0] in [default]
+[2026-07-28T22:15:29.749+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client;1.42.3 by [com.google.http-client#google-http-client;1.43.3] in [default]
+[2026-07-28T22:15:29.752+0000] {subprocess.py:93} INFO - 	org.apache.httpcomponents#httpcore;4.4.15 by [org.apache.httpcomponents#httpcore;4.4.16] in [default]
+[2026-07-28T22:15:29.761+0000] {subprocess.py:93} INFO - 	commons-codec#commons-codec;1.15 by [commons-codec#commons-codec;1.16.1] in [default]
+[2026-07-28T22:15:29.764+0000] {subprocess.py:93} INFO - 	com.google.errorprone#error_prone_annotations;2.16 by [com.google.errorprone#error_prone_annotations;2.18.0] in [default]
+[2026-07-28T22:15:29.772+0000] {subprocess.py:93} INFO - 	com.google.j2objc#j2objc-annotations;1.3 by [com.google.j2objc#j2objc-annotations;2.8] in [default]
+[2026-07-28T22:15:29.782+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-gson;1.42.3 by [com.google.http-client#google-http-client-gson;1.43.3] in [default]
+[2026-07-28T22:15:29.786+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-apache-v2;1.42.3 by [com.google.http-client#google-http-client-apache-v2;1.44.1] in [default]
+[2026-07-28T22:15:29.793+0000] {subprocess.py:93} INFO - 	com.fasterxml.jackson.core#jackson-core;2.13.4 by [com.fasterxml.jackson.core#jackson-core;2.17.0] in [default]
+[2026-07-28T22:15:29.796+0000] {subprocess.py:93} INFO - 	com.google.api-client#google-api-client;2.0.0 by [com.google.api-client#google-api-client;2.2.0] in [default]
+[2026-07-28T22:15:29.800+0000] {subprocess.py:93} INFO - 	com.google.api-client#google-api-client;2.2.0 by [com.google.api-client#google-api-client;2.4.0] in [default]
+[2026-07-28T22:15:29.802+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client;1.43.3 by [com.google.http-client#google-http-client;1.44.1] in [default]
+[2026-07-28T22:15:29.814+0000] {subprocess.py:93} INFO - 	com.google.errorprone#error_prone_annotations;2.18.0 by [com.google.errorprone#error_prone_annotations;2.26.1] in [default]
+[2026-07-28T22:15:29.817+0000] {subprocess.py:93} INFO - 	com.google.j2objc#j2objc-annotations;2.8 by [com.google.j2objc#j2objc-annotations;3.0.0] in [default]
+[2026-07-28T22:15:29.820+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-gson;1.43.3 by [com.google.http-client#google-http-client-gson;1.44.1] in [default]
+[2026-07-28T22:15:29.822+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-common-protos;2.29.0 by [com.google.api.grpc#proto-google-common-protos;2.38.0] in [default]
+[2026-07-28T22:15:29.831+0000] {subprocess.py:93} INFO - 	com.google.api#gax;2.12.2 by [com.google.api#gax;2.47.0] in [default]
+[2026-07-28T22:15:29.835+0000] {subprocess.py:93} INFO - 	com.google.errorprone#error_prone_annotations;2.11.0 by [com.google.errorprone#error_prone_annotations;2.18.0] in [default]
+[2026-07-28T22:15:29.838+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-common-protos;2.7.3 by [com.google.api.grpc#proto-google-common-protos;2.38.0] in [default]
+[2026-07-28T22:15:29.840+0000] {subprocess.py:93} INFO - 	org.threeten#threetenbp;1.5.2 by [org.threeten#threetenbp;1.6.9] in [default]
+[2026-07-28T22:15:29.848+0000] {subprocess.py:93} INFO - 	com.google.api#api-common;2.1.4 by [com.google.api#api-common;2.30.0] in [default]
+[2026-07-28T22:15:29.853+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client;1.41.3 by [com.google.http-client#google-http-client;1.44.1] in [default]
+[2026-07-28T22:15:29.855+0000] {subprocess.py:93} INFO - 	com.google.http-client#google-http-client-gson;1.41.3 by [com.google.http-client#google-http-client-gson;1.44.1] in [default]
+[2026-07-28T22:15:29.871+0000] {subprocess.py:93} INFO - 	com.google.api#gax;2.42.0 by [com.google.api#gax;2.47.0] in [default]
+[2026-07-28T22:15:29.874+0000] {subprocess.py:93} INFO - 	com.google.api#api-common;2.25.0 by [com.google.api#api-common;2.30.0] in [default]
+[2026-07-28T22:15:29.876+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-common-protos;2.33.0 by [com.google.api.grpc#proto-google-common-protos;2.38.0] in [default]
+[2026-07-28T22:15:29.885+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-inprocess;1.61.0 by [io.grpc#grpc-inprocess;1.62.2] in [default]
+[2026-07-28T22:15:29.889+0000] {subprocess.py:93} INFO - 	org.threeten#threetenbp;1.6.8 by [org.threeten#threetenbp;1.6.9] in [default]
+[2026-07-28T22:15:29.895+0000] {subprocess.py:93} INFO - 	io.opencensus#opencensus-api;0.31.0 by [io.opencensus#opencensus-api;0.31.1] in [default]
+[2026-07-28T22:15:29.897+0000] {subprocess.py:93} INFO - 	com.google.cloud#google-cloud-core-grpc;1.82.0 by [com.google.cloud#google-cloud-core-grpc;2.37.0] in [default]
+[2026-07-28T22:15:29.906+0000] {subprocess.py:93} INFO - 	com.google.api#api-common;1.8.1 by [com.google.api#api-common;2.30.0] in [default]
+[2026-07-28T22:15:29.909+0000] {subprocess.py:93} INFO - 	com.google.api.grpc#proto-google-common-protos;1.16.0 by [com.google.api.grpc#proto-google-common-protos;2.38.0] in [default]
+[2026-07-28T22:15:29.911+0000] {subprocess.py:93} INFO - 	com.google.errorprone#error_prone_annotations;2.23.0 by [com.google.errorprone#error_prone_annotations;2.26.1] in [default]
+[2026-07-28T22:15:29.923+0000] {subprocess.py:93} INFO - 	io.perfmark#perfmark-api;0.26.0 by [io.perfmark#perfmark-api;0.27.0] in [default]
+[2026-07-28T22:15:29.929+0000] {subprocess.py:93} INFO - 	io.grpc#grpc-googleapis;1.61.0 by [io.grpc#grpc-googleapis;1.62.2] in [default]
+[2026-07-28T22:15:29.931+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-07-28T22:15:29.937+0000] {subprocess.py:93} INFO - 	|                  |            modules            ||   artifacts   |
+[2026-07-28T22:15:29.942+0000] {subprocess.py:93} INFO - 	|       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2026-07-28T22:15:29.944+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-07-28T22:15:29.947+0000] {subprocess.py:93} INFO - 	|      default     |  126  |   0   |   0   |   35  ||   91  |   0   |
+[2026-07-28T22:15:29.951+0000] {subprocess.py:93} INFO - 	---------------------------------------------------------------------
+[2026-07-28T22:15:29.963+0000] {subprocess.py:93} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-ea68e85e-66b8-4dad-8a55-df411a3c9273
+[2026-07-28T22:15:29.966+0000] {subprocess.py:93} INFO - 	confs: [default]
+[2026-07-28T22:15:29.977+0000] {subprocess.py:93} INFO - 	0 artifacts copied, 91 already retrieved (0kB/155ms)
+[2026-07-28T22:15:30.195+0000] {subprocess.py:93} INFO - 26/07/28 22:15:30 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-07-28T22:15:32.831+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-07-28T22:15:32.833+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-07-28T22:17:53.959+0000] {subprocess.py:93} INFO - [Stage 8:>                                                          (0 + 4) / 4][Stage 8:=============================>                             (2 + 2) / 4]                                                                                Building Gold Layer: Aggregating & Joining Data...
+[2026-07-28T22:17:54.078+0000] {subprocess.py:93} INFO - Loaded dim_station to BigQuery.
+[2026-07-28T22:17:54.081+0000] {subprocess.py:93} INFO - Loaded dim_weather to BigQuery.
+[2026-07-28T22:17:54.083+0000] {subprocess.py:93} INFO - Loaded fact_station_status to BigQuery.
+[2026-07-28T22:17:55.710+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-28T22:17:55.733+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-28T22:17:56.040+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=process_gold_layer, task_id=run_gold_spark_job, run_id=manual__2026-07-28T22:15:07.775335+00:00, execution_date=20260728T221507, start_date=20260728T221509, end_date=20260728T221756
+[2026-07-28T22:17:56.187+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-07-28T22:17:56.305+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-07-28T22:17:56.312+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

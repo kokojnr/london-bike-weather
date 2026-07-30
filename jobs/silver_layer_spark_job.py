@@ -35,7 +35,7 @@ def process_weather_data(spark, bucket_name):
             current_timestamp().alias("processed_at") # Metadata: when the pipeline ran
         )
         
-        # 3. Write to the Silver layer as Parquet
+        # Write to the Silver layer as Parquet
         silver_path = f"gs://{bucket_name}/silver/weather/"
         
         silver_weather_df.write.mode("overwrite").parquet(silver_path)
@@ -62,9 +62,12 @@ def process_bike_data(spark, bucket_name):
             col("lon").alias("longitude"),
             # Extracting values from additional properties nested array
             expr("filter(additionalProperties, x -> x.key = 'NbBikes')[0].value").cast("int").alias("nb_bikes"),
+            expr("filter(additionalProperties, x -> x.key = 'NbStandardBikes')[0].value").cast("int").alias("nb_standard_bikes"),
+            expr("filter(additionalProperties, x -> x.key = 'NbEBikes')[0].value").cast("int").alias("nb_e_bikes"),
             expr("filter(additionalProperties, x -> x.key = 'NbEmptyDocks')[0].value").cast("int").alias("nb_empty_docks"),
             expr("filter(additionalProperties, x -> x.key = 'NbDocks')[0].value").cast("int").alias("nb_docks"),
-            expr("filter(additionalProperties, x -> x.key = 'NbBikes')[0].modified").cast("timestamp").alias("observation_time"), # Ground truth time from API
+            
+            expr("filter(additionalProperties, x -> x.key = 'NbBikes')[0].modified").cast("timestamp").alias("observation_time"),
             current_timestamp().alias("processed_at") # Metadata: when the ETL ran
         )
         

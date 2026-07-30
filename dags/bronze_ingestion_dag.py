@@ -3,6 +3,7 @@ import requests
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.providers.google.cloud.hooks.gcs import GCSHook
 from airflow.models import Variable
 
@@ -47,5 +48,12 @@ with DAG(
     schedule_interval='@hourly',
     catchup=False
 ) as dag:
-    PythonOperator(task_id='bike_ingest', python_callable=fetch_bike_data)
-    PythonOperator(task_id='weather_ingest', python_callable=fetch_weather_data)
+    bike_ingest = PythonOperator(task_id='bike_ingest', python_callable=fetch_bike_data)
+    weather_ingest = PythonOperator(task_id='weather_ingest', python_callable=fetch_weather_data)
+    trigger_silver_task = TriggerDagRunOperator(
+        task_id='trigger_silver_layer',
+        trigger_dag_id='process_silver_layer',
+        reset_dag_run=True,
+        wait_for_completion=False)   
+     
+[bike_ingest, weather_ingest] >> trigger_silver_task

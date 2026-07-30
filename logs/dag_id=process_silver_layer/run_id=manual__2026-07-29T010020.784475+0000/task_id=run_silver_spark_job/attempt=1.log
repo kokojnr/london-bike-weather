@@ -1,0 +1,29 @@
+[2026-07-29T01:00:28.413+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-07-29T01:00:28.479+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_silver_layer.run_silver_spark_job manual__2026-07-29T01:00:20.784475+00:00 [queued]>
+[2026-07-29T01:00:28.495+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_silver_layer.run_silver_spark_job manual__2026-07-29T01:00:20.784475+00:00 [queued]>
+[2026-07-29T01:00:28.497+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-07-29T01:00:28.533+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_silver_spark_job> on 2026-07-29 01:00:20.784475+00:00
+[2026-07-29T01:00:28.553+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'process_silver_layer', 'run_silver_spark_job', 'manual__2026-07-29T01:00:20.784475+00:00', '--job-id', '196', '--raw', '--subdir', 'DAGS_FOLDER/silver_processing_dag.py', '--cfg-path', '/tmp/tmp9vhgpjhb']
+[2026-07-29T01:00:28.561+0000] {standard_task_runner.py:91} INFO - Job 196: Subtask run_silver_spark_job
+[2026-07-29T01:00:28.576+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=17707) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-07-29T01:00:28.579+0000] {standard_task_runner.py:63} INFO - Started process 17708 to run task
+[2026-07-29T01:00:28.657+0000] {task_command.py:426} INFO - Running <TaskInstance: process_silver_layer.run_silver_spark_job manual__2026-07-29T01:00:20.784475+00:00 [running]> on host 21f1a12a00bc
+[2026-07-29T01:00:28.827+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='process_silver_layer' AIRFLOW_CTX_TASK_ID='run_silver_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2026-07-29T01:00:20.784475+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-07-29T01:00:20.784475+00:00'
+[2026-07-29T01:00:28.830+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-07-29T01:00:28.855+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-07-29T01:00:28.864+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'export GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp_key.json && python /opt/***/jobs/silver_layer_spark_job.py london_bike_data_bronze']
+[2026-07-29T01:00:28.886+0000] {subprocess.py:86} INFO - Output:
+[2026-07-29T01:00:30.798+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.12/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2026-07-29T01:00:35.831+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-07-29T01:00:35.834+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-07-29T01:00:36.235+0000] {subprocess.py:93} INFO - 26/07/29 01:00:36 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-07-29T01:03:22.909+0000] {subprocess.py:93} INFO - [Stage 5:>                                                          (0 + 4) / 4]                                                                                Processing Weather Data...
+[2026-07-29T01:03:22.990+0000] {subprocess.py:93} INFO - Weather data processed and saved to gs://london_bike_data_bronze/silver/weather/
+[2026-07-29T01:03:22.995+0000] {subprocess.py:93} INFO - Processing Bike Data...
+[2026-07-29T01:03:23.004+0000] {subprocess.py:93} INFO - Bike data processed and saved to gs://london_bike_data_bronze/silver/bike/
+[2026-07-29T01:03:24.792+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-07-29T01:03:24.818+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-07-29T01:03:25.230+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=process_silver_layer, task_id=run_silver_spark_job, run_id=manual__2026-07-29T01:00:20.784475+00:00, execution_date=20260729T010020, start_date=20260729T010028, end_date=20260729T010325
+[2026-07-29T01:03:25.469+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-07-29T01:03:25.732+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-07-29T01:03:25.739+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
