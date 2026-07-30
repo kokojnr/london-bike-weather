@@ -3,6 +3,7 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.hooks.base import BaseHook
 
 GCS_BUCKET_NAME = "london_bike_data_bronze"
@@ -38,12 +39,12 @@ with DAG(
     'process_silver_layer',
     default_args=default_args,
     description='Run PySpark job to process Bronze data into Silver Parquet files',
-    schedule_interval=None, # trigger manually for the meantime
+    schedule_interval=None, 
     catchup=False,
     tags=['silver', 'processing', 'spark'],
 ) as dag:
 
-    # Task 1: Prepare the JSON Key
+    # Prepare the JSON Key
     prepare_key_task = PythonOperator(
         task_id='prepare_gcp_key',
         python_callable=setup_gcp_credentials
@@ -56,7 +57,12 @@ with DAG(
             "export GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp_key.json && "
             f"python /opt/airflow/jobs/silver_layer_spark_job.py {GCS_BUCKET_NAME}"
         )
+    
     )
+    trigger_gold_task = TriggerDagRunOperator(
+        task_id='trigger_gold_layer',
+        trigger_dag_id='process_gold_layer',
+        reset_dag_run=True,
+        wait_for_completion=False)
 
-
-prepare_key_task >> run_spark_task
+prepare_key_task >> run_spark_task >> trigger_gold_task
