@@ -1,6 +1,18 @@
 ﻿# London Bike & Weather Data Pipeline
 
-An automated data engineering pipeline that ingests real-time bike station data from TfL and weather data from OpenWeatherMap, processes it using Apache Spark, and loads it into a Google Cloud BigQuery data warehouse for analysis.
+An automated data engineering pipeline that ingests real-time bike station data from Transport for london(TfL) and weather data from OpenWeatherMap, processes it using Apache Spark, and loads it into a Google Cloud BigQuery data warehouse for analysis.
+
+## Objectives
+
+This pipeline is engineered specifically to answer high-value urban mobility questions by combining micro-mobility data with real-time weather conditions:
+
+1. Weather Impact on Commuter Demand: Analyzing how adverse weather conditions (rain, high winds, temperature drops) suppress overall bike usage across London.
+
+2. Station Stress & Rebalancing Intelligence: Identifying "starvation" (0% available bikes) and "saturation" (100% full docks) hotspots to optimize TfL's physical truck rebalancing routes.
+
+3. Micro-Mobility Trends: Tracking user preference between Standard Bikes vs. E-Bikes, specifically examining if E-bikes are more resilient to poor weather.
+
+4. Spatial Utilization Heatmaps: Visualizing geographic parking turnover rates to map urban commute flows throughout the day.
 
 ## Project Architecture
 
