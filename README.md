@@ -85,19 +85,19 @@ These steps ensure a stable environment on an Intel-based machine, resolving com
     *   Paste your service account **JSON** keyfile content into the `Keyfile JSON` box. *Do not hardcode paths.
     *   Save the connection.
 ### Airflow DAGS
-<img width="1920" height="1080" alt="Airflow DAGS" src="https://github.com/user-attachments/assets/b3caed3f-b679-4745-8130-fb2aaf30e4fd" />
+<img width="960" height="540" alt="Airflow DAGS" src="https://github.com/user-attachments/assets/b3caed3f-b679-4745-8130-fb2aaf30e4fd" />
 
 ### Docker Container
-<img width="1920" height="1080" alt="Docker" src="https://github.com/user-attachments/assets/ed93c273-0e15-4cfe-b8a4-970ab1d9af52" />
+<img width="960" height="540" alt="Docker" src="https://github.com/user-attachments/assets/ed93c273-0e15-4cfe-b8a4-970ab1d9af52" />
 
 ### Data Lake (GCP Bucket)
-<img width="1920" height="1080" alt="GCP Buket" src="https://github.com/user-attachments/assets/be350af6-c94e-4bc4-a3fe-7dc4f4727bbe" />
+<img width="960" height="540" alt="GCP Buket" src="https://github.com/user-attachments/assets/be350af6-c94e-4bc4-a3fe-7dc4f4727bbe" />
 
 ### Data Warehouse (Google Bigquery)
-<img width="1920" height="1080" alt="BigQuery" src="https://github.com/user-attachments/assets/86c99a3f-cbbc-45eb-bb26-2e82e17ce44c" />
+<img width="960" height="540" alt="BigQuery" src="https://github.com/user-attachments/assets/86c99a3f-cbbc-45eb-bb26-2e82e17ce44c" />
 
 ### Power BI Dashboard
-<img width="1920" height="1080" alt="BI Dashboard 1" src="https://github.com/user-attachments/assets/9e6204c2-89bc-45cd-8af5-927a07869211" />
+<img width="960" height="540" alt="BI Dashboard 1" src="https://github.com/user-attachments/assets/9e6204c2-89bc-45cd-8af5-927a07869211" />
 
       
 
