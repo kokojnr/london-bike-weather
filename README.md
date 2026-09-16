@@ -6,7 +6,7 @@ An automated data engineering pipeline that ingests real-time bike station data 
 
 This pipeline is engineered specifically to answer high-value urban mobility questions by combining micro-mobility data with real-time weather conditions:
 
-1. Weather Impact on Commuter Demand: Analyzing how adverse weather conditions (rain, high winds, temperature drops) suppress overall bike usage across London.
+1. Weather Impact on Commuter Demand: Analyzing how adverse weather conditions affects overall bike usage across London.
 
 2. Station Stress & Rebalancing Intelligence: Identifying "starvation" (0% available bikes) and "saturation" (100% full docks) hotspots to optimize TfL's physical truck rebalancing routes.
 
@@ -22,8 +22,6 @@ The architecture diagram below illustrates how components interact, highlighting
 
 ### London Bike & Weather Pipeline Architecture
 <img width="2816" height="1536" alt="London Bike Architecture" src="https://github.com/user-attachments/assets/840d7d4a-297f-4a97-a616-4c7234fc18a2" />
-
-
 
 ### Key Components
 
@@ -84,7 +82,23 @@ These steps ensure a stable environment on an Intel-based machine, resolving com
     *   Go to **Admin** -> **Connections**.
     *   Edit/Create connection Id: `google_cloud_default`.
     *   Connection Type: `Google Cloud`.
-    *   Paste your service account **JSON** keyfile content into the `Keyfile JSON` box. *Do not hardcode paths.*
+    *   Paste your service account **JSON** keyfile content into the `Keyfile JSON` box. *Do not hardcode paths.
     *   Save the connection.
+### Airflow DAGS
+<img width="960" height="540" alt="Airflow DAGS" src="https://github.com/user-attachments/assets/b3caed3f-b679-4745-8130-fb2aaf30e4fd" />
+
+### Docker Container
+<img width="960" height="540" alt="Docker" src="https://github.com/user-attachments/assets/ed93c273-0e15-4cfe-b8a4-970ab1d9af52" />
+
+### Data Lake (GCP Bucket)
+<img width="960" height="540" alt="GCP Buket" src="https://github.com/user-attachments/assets/be350af6-c94e-4bc4-a3fe-7dc4f4727bbe" />
+
+### Data Warehouse (Google Bigquery)
+<img width="960" height="540" alt="BigQuery" src="https://github.com/user-attachments/assets/86c99a3f-cbbc-45eb-bb26-2e82e17ce44c" />
+
+### Power BI Dashboard
+<img width="960" height="540" alt="BI Dashboard 1" src="https://github.com/user-attachments/assets/9e6204c2-89bc-45cd-8af5-927a07869211" />
+
+      
 
 ---
