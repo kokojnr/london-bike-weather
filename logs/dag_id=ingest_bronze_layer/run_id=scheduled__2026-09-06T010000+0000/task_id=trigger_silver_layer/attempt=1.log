@@ -1,0 +1,17 @@
+[2026-09-06T02:00:41.967+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-06T02:00:42.000+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ingest_bronze_layer.trigger_silver_layer scheduled__2026-09-06T01:00:00+00:00 [queued]>
+[2026-09-06T02:00:42.016+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ingest_bronze_layer.trigger_silver_layer scheduled__2026-09-06T01:00:00+00:00 [queued]>
+[2026-09-06T02:00:42.019+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-06T02:00:42.049+0000] {taskinstance.py:2330} INFO - Executing <Task(TriggerDagRunOperator): trigger_silver_layer> on 2026-09-06 01:00:00+00:00
+[2026-09-06T02:00:42.071+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=23929) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-06T02:00:42.068+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ingest_bronze_layer', 'trigger_silver_layer', 'scheduled__2026-09-06T01:00:00+00:00', '--job-id', '357', '--raw', '--subdir', 'DAGS_FOLDER/bronze_ingestion_dag.py', '--cfg-path', '/tmp/tmpm2ckmh2c']
+[2026-09-06T02:00:42.075+0000] {standard_task_runner.py:63} INFO - Started process 23930 to run task
+[2026-09-06T02:00:42.077+0000] {standard_task_runner.py:91} INFO - Job 357: Subtask trigger_silver_layer
+[2026-09-06T02:00:42.195+0000] {task_command.py:426} INFO - Running <TaskInstance: ingest_bronze_layer.trigger_silver_layer scheduled__2026-09-06T01:00:00+00:00 [running]> on host bdc8f6caa133
+[2026-09-06T02:00:42.502+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ingest_bronze_layer' AIRFLOW_CTX_TASK_ID='trigger_silver_layer' AIRFLOW_CTX_EXECUTION_DATE='2026-09-06T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-09-06T01:00:00+00:00'
+[2026-09-06T02:00:42.506+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-06T02:00:48.699+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-06T02:00:48.727+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ingest_bronze_layer, task_id=trigger_silver_layer, run_id=scheduled__2026-09-06T01:00:00+00:00, execution_date=20260906T010000, start_date=20260906T020042, end_date=20260906T020048
+[2026-09-06T02:00:48.897+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-09-06T02:00:48.949+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-06T02:00:48.957+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

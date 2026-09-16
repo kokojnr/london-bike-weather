@@ -12,7 +12,7 @@ GCS_BUCKET_NAME = "london_bike_data_bronze"
 
 def fetch_bike_data(ts_nodash, **kwargs):
     url = "https://api.tfl.gov.uk/BikePoint/"
-    response = requests.get(url)
+    response = requests.get(url, timeout=30)
     response.raise_for_status()
     
     gcs_hook = GCSHook(gcp_conn_id='google_cloud_default')
@@ -23,7 +23,8 @@ def fetch_bike_data(ts_nodash, **kwargs):
         object_name=path,
         data=json.dumps(response.json()),
         mime_type='application/json',
-        timeout=120
+        timeout=300
+        
     )
 
 def fetch_weather_data(ts_nodash, **kwargs):

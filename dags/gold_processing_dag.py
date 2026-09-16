@@ -26,6 +26,6 @@ with DAG(
         task_id='run_gold_spark_job',
         bash_command=(
             "export GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp_key.json && "
-            f"python /opt/airflow/jobs/gold_layer_spark_job.py {GCS_BUCKET_NAME} {GCP_PROJECT_ID}"
+            f"python /opt/airflow/jobs/gold_processing.py {GCS_BUCKET_NAME} {GCP_PROJECT_ID}"
         )
     )

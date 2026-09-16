@@ -1,0 +1,303 @@
+[2026-09-05T20:01:29.379+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-05T20:01:29.713+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: process_silver_layer.run_silver_spark_job manual__2026-09-05T20:00:52.897773+00:00 [queued]>
+[2026-09-05T20:01:29.862+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: process_silver_layer.run_silver_spark_job manual__2026-09-05T20:00:52.897773+00:00 [queued]>
+[2026-09-05T20:01:29.884+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-05T20:01:30.083+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_silver_spark_job> on 2026-09-05 20:00:52.897773+00:00
+[2026-09-05T20:01:30.182+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'process_silver_layer', 'run_silver_spark_job', 'manual__2026-09-05T20:00:52.897773+00:00', '--job-id', '322', '--raw', '--subdir', 'DAGS_FOLDER/silver_processing_dag.py', '--cfg-path', '/tmp/tmpimhco_fj']
+[2026-09-05T20:01:30.214+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5752) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-09-05T20:01:30.257+0000] {standard_task_runner.py:91} INFO - Job 322: Subtask run_silver_spark_job
+[2026-09-05T20:01:30.264+0000] {standard_task_runner.py:63} INFO - Started process 5753 to run task
+[2026-09-05T20:01:30.535+0000] {task_command.py:426} INFO - Running <TaskInstance: process_silver_layer.run_silver_spark_job manual__2026-09-05T20:00:52.897773+00:00 [running]> on host bdc8f6caa133
+[2026-09-05T20:01:31.117+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data_engineer' AIRFLOW_CTX_DAG_ID='process_silver_layer' AIRFLOW_CTX_TASK_ID='run_silver_spark_job' AIRFLOW_CTX_EXECUTION_DATE='2026-09-05T20:00:52.897773+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-09-05T20:00:52.897773+00:00'
+[2026-09-05T20:01:31.134+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-05T20:01:31.292+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-09-05T20:01:31.339+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'export GOOGLE_APPLICATION_CREDENTIALS=/tmp/gcp_key.json && python /opt/***/jobs/silver_processing.py london_bike_data_bronze']
+[2026-09-05T20:01:31.376+0000] {subprocess.py:86} INFO - Output:
+[2026-09-05T20:01:37.244+0000] {subprocess.py:93} INFO - /home/***/.local/lib/python3.12/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2026-09-05T20:02:01.016+0000] {subprocess.py:93} INFO - Setting default log level to "WARN".
+[2026-09-05T20:02:01.104+0000] {subprocess.py:93} INFO - To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+[2026-09-05T20:02:02.430+0000] {subprocess.py:93} INFO - 26/09/05 20:02:02 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2026-09-05T20:06:37.894+0000] {subprocess.py:93} INFO - [Stage 0:>                                                         (0 + 0) / 45][Stage 0:>                                                         (0 + 4) / 45][Stage 0:=>                                                        (1 + 4) / 45][Stage 0:==>                                                       (2 + 4) / 45][Stage 0:=====>                                                    (4 + 5) / 45][Stage 0:======>                                                   (5 + 4) / 45][Stage 0:=======>                                                  (6 + 4) / 45][Stage 0:=========>                                                (7 + 4) / 45][Stage 0:==========>                                               (8 + 4) / 45][Stage 0:===========>                                              (9 + 4) / 45][Stage 0:=============>                                           (11 + 4) / 45][Stage 0:===============>                                         (12 + 4) / 45][Stage 0:=================>                                       (14 + 4) / 45][Stage 0:===================>                                     (15 + 4) / 45][Stage 0:===================>                                     (15 + 5) / 45][Stage 0:=====================>                                   (17 + 4) / 45][Stage 0:======================>                                  (18 + 4) / 45][Stage 0:========================>                                (19 + 4) / 45][Stage 0:===========================>                             (22 + 4) / 45][Stage 0:=============================>                           (23 + 4) / 45][Stage 0:==============================>                          (24 + 4) / 45][Stage 0:===============================>                         (25 + 4) / 45][Stage 0:================================>                        (26 + 5) / 45][Stage 0:===================================>                     (28 + 4) / 45][Stage 0:===================================>                     (28 + 5) / 45][Stage 0:====================================>                    (29 + 5) / 45][Stage 0:======================================>                  (30 + 4) / 45][Stage 0:======================================>                  (30 + 6) / 45][Stage 0:========================================>                (32 + 4) / 45][Stage 0:========================================>                (32 + 5) / 45][Stage 0:=========================================>               (33 + 4) / 45][Stage 0:===========================================>             (34 + 4) / 45][Stage 0:============================================>            (35 + 4) / 45][Stage 0:============================================>            (35 + 5) / 45][Stage 0:=============================================>           (36 + 5) / 45][Stage 0:==============================================>          (37 + 4) / 45][Stage 0:================================================>        (38 + 4) / 45][Stage 0:================================================>        (38 + 5) / 45][Stage 0:==================================================>      (40 + 5) / 45][Stage 0:===================================================>     (41 + 4) / 45][Stage 0:======================================================>  (43 + 2) / 45][Stage 0:=======================================================> (44 + 1) / 45]                                                                                [Stage 1:>                                                         (0 + 4) / 45][Stage 1:===>                                                      (3 + 4) / 45][Stage 1:=======>                                                  (6 + 4) / 45][Stage 1:=========>                                                (7 + 4) / 45][Stage 1:============>                                            (10 + 4) / 45][Stage 1:=============>                                           (11 + 4) / 45][Stage 1:===============>                                         (12 + 4) / 45][Stage 1:===================>                                     (15 + 4) / 45][Stage 1:====================>                                    (16 + 4) / 45][Stage 1:=====================>                                   (17 + 4) / 45][Stage 1:======================>                                  (18 + 4) / 45][Stage 1:========================>                                (19 + 4) / 45][Stage 1:===========================>                             (22 + 4) / 45][Stage 1:==============================>                          (24 + 4) / 45][Stage 1:================================>                        (26 + 4) / 45][Stage 1:==================================>                      (27 + 4) / 45][Stage 1:====================================>                    (29 + 4) / 45][Stage 1:======================================>                  (30 + 4) / 45][Stage 1:=======================================>                 (31 + 4) / 45][Stage 1:=========================================>               (33 + 4) / 45][Stage 1:===========================================>             (34 + 4) / 45][Stage 1:=============================================>           (36 + 4) / 45][Stage 1:==============================================>          (37 + 4) / 45][Stage 1:=================================================>       (39 + 4) / 45][Stage 1:=====================================================>   (42 + 3) / 45]                                                                                [Stage 2:>                                                          (0 + 4) / 4][Stage 2:==============>                                            (1 + 3) / 4][Stage 2:============================================>              (3 + 1) / 4]                                                                                [Stage 3:>                                                          (0 + 4) / 4][Stage 3:==============>                                            (1 + 3) / 4][Stage 3:============================================>              (3 + 1) / 4][Stage 3:===========================================================(4 + 0) / 4]                                                                                [Stage 4:>                                                         (0 + 0) / 50][Stage 4:>                                                         (0 + 4) / 50][Stage 4:==>                                                       (2 + 4) / 50][Stage 4:====>                                                     (4 + 4) / 50][Stage 4:=====>                                                    (5 + 4) / 50][Stage 4:======>                                                   (6 + 4) / 50][Stage 4:========>                                                 (7 + 4) / 50][Stage 4:=========>                                                (8 + 4) / 50][Stage 4:==========>                                               (9 + 4) / 50][Stage 4:============>                                            (11 + 4) / 50][Stage 4:=============>                                           (12 + 4) / 50][Stage 4:===============>                                         (14 + 4) / 50][Stage 4:=================>                                       (15 + 4) / 50][Stage 4:==================>                                      (16 + 4) / 50][Stage 4:====================>                                    (18 + 4) / 50][Stage 4:=====================>                                   (19 + 4) / 50][Stage 4:======================>                                  (20 + 4) / 50][Stage 4:=======================>                                 (21 + 4) / 50][Stage 4:=========================>                               (22 + 4) / 50][Stage 4:==========================>                              (23 + 4) / 50][Stage 4:===========================>                             (24 + 4) / 50][Stage 4:=============================>                           (26 + 4) / 50][Stage 4:==============================>                          (27 + 4) / 50][Stage 4:==================================>                      (30 + 4) / 50][Stage 4:===================================>                     (31 + 4) / 50][Stage 4:====================================>                    (32 + 4) / 50][Stage 4:=======================================>                 (35 + 4) / 50][Stage 4:=========================================>               (36 + 4) / 50][Stage 4:============================================>            (39 + 4) / 50][Stage 4:=============================================>           (40 + 4) / 50][Stage 4:===============================================>         (42 + 4) / 50][Stage 4:=================================================>       (43 + 4) / 50][Stage 4:===================================================>     (45 + 4) / 50][Stage 4:====================================================>    (46 + 4) / 50][Stage 4:=======================================================> (49 + 1) / 50]                                                                                [Stage 5:>                                                         (0 + 4) / 50][Stage 5:=>                                                        (1 + 4) / 50][Stage 5:====>                                                     (4 + 4) / 50][Stage 5:=====>                                                    (5 + 4) / 50][Stage 5:========>                                                 (7 + 4) / 50][Stage 5:=========>                                                (8 + 4) / 50][Stage 5:===========>                                             (10 + 4) / 50][Stage 5:=============>                                           (12 + 4) / 50][Stage 5:===============>                                         (14 + 4) / 50][Stage 5:=================>                                       (15 + 4) / 50][Stage 5:==================>                                      (16 + 4) / 50][Stage 5:====================>                                    (18 + 4) / 50][Stage 5:======================>                                  (20 + 4) / 50][Stage 5:=========================>                               (22 + 4) / 50][Stage 5:===========================>                             (24 + 4) / 50][Stage 5:=============================>                           (26 + 4) / 50][Stage 5:==============================>                          (27 + 4) / 50][Stage 5:===============================>                         (28 + 4) / 50][Stage 5:==================================>                      (30 + 4) / 50][Stage 5:====================================>                    (32 + 4) / 50][Stage 5:======================================>                  (34 + 4) / 50][Stage 5:=======================================>                 (35 + 4) / 50][Stage 5:=========================================>               (36 + 4) / 50][Stage 5:===========================================>             (38 + 4) / 50][Stage 5:=============================================>           (40 + 4) / 50][Stage 5:==============================================>          (41 + 4) / 50][Stage 5:=================================================>       (43 + 4) / 50][Stage 5:==================================================>      (44 + 4) / 50][Stage 5:===================================================>     (45 + 4) / 50][Stage 5:======================================================>  (48 + 2) / 50][Stage 5:=======================================================> (49 + 1) / 50]                                                                                [Stage 6:>                                                          (0 + 4) / 4]26/09/05 20:06:37 WARN GoogleCloudStorageReadChannel: Failed read retry #1/10 for 'gs://london_bike_data_bronze/bronze/bike/20260905/data_20260905T150000.json'. Sleeping...
+[2026-09-05T20:06:37.986+0000] {subprocess.py:93} INFO - java.net.SocketTimeoutException: Read timed out
+[2026-09-05T20:06:38.003+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+[2026-09-05T20:06:38.013+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+[2026-09-05T20:06:38.022+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+[2026-09-05T20:06:38.030+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+[2026-09-05T20:06:38.038+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+[2026-09-05T20:06:38.044+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+[2026-09-05T20:06:38.054+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:467)
+[2026-09-05T20:06:38.072+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+[2026-09-05T20:06:38.090+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+[2026-09-05T20:06:38.102+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+[2026-09-05T20:06:38.109+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1512)
+[2026-09-05T20:06:38.112+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1483)
+[2026-09-05T20:06:38.116+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1069)
+[2026-09-05T20:06:38.119+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+[2026-09-05T20:06:38.123+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:06:38.130+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.MeteredStream.read(MeteredStream.java:141)
+[2026-09-05T20:06:38.138+0000] {subprocess.py:93} INFO - 	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+[2026-09-05T20:06:38.146+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(HttpURLConnection.java:3750)
+[2026-09-05T20:06:38.154+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.api.client.http.javanet.NetHttpResponse$SizeValidatingInputStream.read(NetHttpResponse.java:164)
+[2026-09-05T20:06:38.160+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+[2026-09-05T20:06:38.165+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+[2026-09-05T20:06:38.168+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:06:38.171+0000] {subprocess.py:93} INFO - 	at java.base/java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:387)
+[2026-09-05T20:06:38.174+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageReadChannel.read(GoogleCloudStorageReadChannel.java:318)
+[2026-09-05T20:06:38.177+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFSInputStream.read(GoogleHadoopFSInputStream.java:176)
+[2026-09-05T20:06:38.181+0000] {subprocess.py:93} INFO - 	at java.base/java.io.DataInputStream.read(DataInputStream.java:151)
+[2026-09-05T20:06:38.184+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+[2026-09-05T20:06:38.186+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+[2026-09-05T20:06:38.189+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+[2026-09-05T20:06:38.191+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+[2026-09-05T20:06:38.194+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+[2026-09-05T20:06:38.196+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+[2026-09-05T20:06:38.198+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+[2026-09-05T20:06:38.200+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+[2026-09-05T20:06:38.202+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:06:38.204+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:06:38.214+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:06:38.217+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:283)
+[2026-09-05T20:06:38.224+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:06:38.233+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:06:38.236+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+[2026-09-05T20:06:38.243+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+[2026-09-05T20:06:38.246+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+[2026-09-05T20:06:38.251+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+[2026-09-05T20:06:38.263+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption(TraversableOnce.scala:249)
+[2026-09-05T20:06:38.266+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption$(TraversableOnce.scala:248)
+[2026-09-05T20:06:38.277+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceLeftOption(Iterator.scala:1431)
+[2026-09-05T20:06:38.283+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption(TraversableOnce.scala:256)
+[2026-09-05T20:06:38.289+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption$(TraversableOnce.scala:256)
+[2026-09-05T20:06:38.296+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceOption(Iterator.scala:1431)
+[2026-09-05T20:06:38.300+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.json.JsonInferSchema.$anonfun$infer$1(JsonInferSchema.scala:107)
+[2026-09-05T20:06:38.309+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:858)
+[2026-09-05T20:06:38.313+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:858)
+[2026-09-05T20:06:38.318+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-09-05T20:06:38.322+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-09-05T20:06:38.326+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-09-05T20:06:38.330+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-09-05T20:06:38.335+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-09-05T20:06:38.345+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-09-05T20:06:38.350+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-09-05T20:06:38.357+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-09-05T20:06:38.368+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-09-05T20:06:38.376+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-09-05T20:06:38.387+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-09-05T20:06:38.398+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-09-05T20:06:38.401+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-09-05T20:06:38.403+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-09-05T20:07:16.988+0000] {subprocess.py:93} INFO - [Stage 6:>                                                          (0 + 4) / 4]26/09/05 20:07:16 WARN GoogleCloudStorageReadChannel: Failed read retry #1/10 for 'gs://london_bike_data_bronze/bronze/bike/20260727/data_20260727T020000.json'. Sleeping...
+[2026-09-05T20:07:17.001+0000] {subprocess.py:93} INFO - java.net.SocketTimeoutException: Read timed out
+[2026-09-05T20:07:17.009+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+[2026-09-05T20:07:17.012+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+[2026-09-05T20:07:17.015+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+[2026-09-05T20:07:17.022+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+[2026-09-05T20:07:17.025+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+[2026-09-05T20:07:17.031+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+[2026-09-05T20:07:17.034+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:467)
+[2026-09-05T20:07:17.037+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+[2026-09-05T20:07:17.039+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+[2026-09-05T20:07:17.042+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+[2026-09-05T20:07:17.044+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1512)
+[2026-09-05T20:07:17.046+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1483)
+[2026-09-05T20:07:17.049+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1069)
+[2026-09-05T20:07:17.052+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+[2026-09-05T20:07:17.054+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:07:17.057+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.MeteredStream.read(MeteredStream.java:141)
+[2026-09-05T20:07:17.060+0000] {subprocess.py:93} INFO - 	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+[2026-09-05T20:07:17.063+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(HttpURLConnection.java:3750)
+[2026-09-05T20:07:17.065+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.api.client.http.javanet.NetHttpResponse$SizeValidatingInputStream.read(NetHttpResponse.java:164)
+[2026-09-05T20:07:17.068+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+[2026-09-05T20:07:17.071+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:07:17.074+0000] {subprocess.py:93} INFO - 	at java.base/java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:387)
+[2026-09-05T20:07:17.076+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageReadChannel.read(GoogleCloudStorageReadChannel.java:318)
+[2026-09-05T20:07:17.080+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFSInputStream.read(GoogleHadoopFSInputStream.java:176)
+[2026-09-05T20:07:17.082+0000] {subprocess.py:93} INFO - 	at java.base/java.io.DataInputStream.read(DataInputStream.java:151)
+[2026-09-05T20:07:17.085+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+[2026-09-05T20:07:17.088+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+[2026-09-05T20:07:17.090+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+[2026-09-05T20:07:17.092+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+[2026-09-05T20:07:17.095+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+[2026-09-05T20:07:17.098+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+[2026-09-05T20:07:17.101+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+[2026-09-05T20:07:17.103+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+[2026-09-05T20:07:17.106+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:17.108+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:17.110+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:07:17.114+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:283)
+[2026-09-05T20:07:17.116+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:07:17.117+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:17.119+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+[2026-09-05T20:07:17.121+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+[2026-09-05T20:07:17.123+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+[2026-09-05T20:07:17.129+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+[2026-09-05T20:07:17.132+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption(TraversableOnce.scala:249)
+[2026-09-05T20:07:17.134+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption$(TraversableOnce.scala:248)
+[2026-09-05T20:07:17.137+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceLeftOption(Iterator.scala:1431)
+[2026-09-05T20:07:17.139+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption(TraversableOnce.scala:256)
+[2026-09-05T20:07:17.143+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption$(TraversableOnce.scala:256)
+[2026-09-05T20:07:17.146+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceOption(Iterator.scala:1431)
+[2026-09-05T20:07:17.150+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.json.JsonInferSchema.$anonfun$infer$1(JsonInferSchema.scala:107)
+[2026-09-05T20:07:17.152+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:858)
+[2026-09-05T20:07:17.155+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:858)
+[2026-09-05T20:07:17.157+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-09-05T20:07:17.160+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-09-05T20:07:17.162+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-09-05T20:07:17.165+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-09-05T20:07:17.167+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-09-05T20:07:17.169+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-09-05T20:07:17.171+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-09-05T20:07:17.174+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-09-05T20:07:17.177+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-09-05T20:07:17.179+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-09-05T20:07:17.181+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-09-05T20:07:17.183+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-09-05T20:07:17.185+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-09-05T20:07:17.187+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-09-05T20:07:34.479+0000] {subprocess.py:93} INFO - 26/09/05 20:07:34 WARN GoogleCloudStorageReadChannel: Failed read retry #1/10 for 'gs://london_bike_data_bronze/bronze/bike/20260719/data_20260719T122936.json'. Sleeping...
+[2026-09-05T20:07:34.482+0000] {subprocess.py:93} INFO - java.net.SocketTimeoutException: Read timed out
+[2026-09-05T20:07:34.483+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+[2026-09-05T20:07:34.485+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+[2026-09-05T20:07:34.488+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+[2026-09-05T20:07:34.490+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+[2026-09-05T20:07:34.493+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+[2026-09-05T20:07:34.496+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+[2026-09-05T20:07:34.498+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.readFully(SSLSocketInputRecord.java:467)
+[2026-09-05T20:07:34.500+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.decodeInputRecord(SSLSocketInputRecord.java:243)
+[2026-09-05T20:07:34.501+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:181)
+[2026-09-05T20:07:34.504+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+[2026-09-05T20:07:34.506+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1512)
+[2026-09-05T20:07:34.509+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1483)
+[2026-09-05T20:07:34.511+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1069)
+[2026-09-05T20:07:34.514+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+[2026-09-05T20:07:34.516+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:07:34.519+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.MeteredStream.read(MeteredStream.java:141)
+[2026-09-05T20:07:34.521+0000] {subprocess.py:93} INFO - 	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+[2026-09-05T20:07:34.523+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(HttpURLConnection.java:3750)
+[2026-09-05T20:07:34.526+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.api.client.http.javanet.NetHttpResponse$SizeValidatingInputStream.read(NetHttpResponse.java:164)
+[2026-09-05T20:07:34.527+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+[2026-09-05T20:07:34.530+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:07:34.532+0000] {subprocess.py:93} INFO - 	at java.base/java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:387)
+[2026-09-05T20:07:34.535+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageReadChannel.read(GoogleCloudStorageReadChannel.java:318)
+[2026-09-05T20:07:34.537+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFSInputStream.read(GoogleHadoopFSInputStream.java:176)
+[2026-09-05T20:07:34.539+0000] {subprocess.py:93} INFO - 	at java.base/java.io.DataInputStream.read(DataInputStream.java:151)
+[2026-09-05T20:07:34.541+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+[2026-09-05T20:07:34.543+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+[2026-09-05T20:07:34.545+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+[2026-09-05T20:07:34.548+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+[2026-09-05T20:07:34.550+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+[2026-09-05T20:07:34.553+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+[2026-09-05T20:07:34.555+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+[2026-09-05T20:07:34.557+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+[2026-09-05T20:07:34.559+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:34.560+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:34.563+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:07:34.565+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:283)
+[2026-09-05T20:07:34.567+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:07:34.570+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:34.572+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+[2026-09-05T20:07:34.575+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.isEmpty(Iterator.scala:387)
+[2026-09-05T20:07:34.577+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.isEmpty$(Iterator.scala:387)
+[2026-09-05T20:07:34.579+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.isEmpty(Iterator.scala:1431)
+[2026-09-05T20:07:34.581+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption(TraversableOnce.scala:249)
+[2026-09-05T20:07:34.583+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption$(TraversableOnce.scala:248)
+[2026-09-05T20:07:34.585+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceLeftOption(Iterator.scala:1431)
+[2026-09-05T20:07:34.587+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption(TraversableOnce.scala:256)
+[2026-09-05T20:07:34.589+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption$(TraversableOnce.scala:256)
+[2026-09-05T20:07:34.590+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceOption(Iterator.scala:1431)
+[2026-09-05T20:07:34.592+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.json.JsonInferSchema.$anonfun$infer$1(JsonInferSchema.scala:107)
+[2026-09-05T20:07:34.594+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:858)
+[2026-09-05T20:07:34.596+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:858)
+[2026-09-05T20:07:34.598+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-09-05T20:07:34.600+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-09-05T20:07:34.601+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-09-05T20:07:34.603+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-09-05T20:07:34.605+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-09-05T20:07:34.607+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-09-05T20:07:34.608+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-09-05T20:07:34.610+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-09-05T20:07:34.612+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-09-05T20:07:34.614+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-09-05T20:07:34.615+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-09-05T20:07:34.617+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-09-05T20:07:34.619+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-09-05T20:07:34.621+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-09-05T20:07:35.868+0000] {subprocess.py:93} INFO - 26/09/05 20:07:35 WARN GoogleCloudStorageReadChannel: Failed read retry #1/10 for 'gs://london_bike_data_bronze/bronze/bike/20260729/data_20260729T040000.json'. Sleeping...
+[2026-09-05T20:07:35.870+0000] {subprocess.py:93} INFO - java.net.SocketTimeoutException: Read timed out
+[2026-09-05T20:07:35.873+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:288)
+[2026-09-05T20:07:35.876+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:314)
+[2026-09-05T20:07:35.880+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+[2026-09-05T20:07:35.882+0000] {subprocess.py:93} INFO - 	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+[2026-09-05T20:07:35.885+0000] {subprocess.py:93} INFO - 	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+[2026-09-05T20:07:35.888+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+[2026-09-05T20:07:35.890+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+[2026-09-05T20:07:35.893+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+[2026-09-05T20:07:35.896+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1464)
+[2026-09-05T20:07:35.898+0000] {subprocess.py:93} INFO - 	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1069)
+[2026-09-05T20:07:35.900+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:282)
+[2026-09-05T20:07:35.903+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:07:35.905+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.MeteredStream.read(MeteredStream.java:141)
+[2026-09-05T20:07:35.907+0000] {subprocess.py:93} INFO - 	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:132)
+[2026-09-05T20:07:35.910+0000] {subprocess.py:93} INFO - 	at java.base/sun.net.www.protocol.http.HttpURLConnection$HttpInputStream.read(HttpURLConnection.java:3750)
+[2026-09-05T20:07:35.913+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.api.client.http.javanet.NetHttpResponse$SizeValidatingInputStream.read(NetHttpResponse.java:164)
+[2026-09-05T20:07:35.917+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:244)
+[2026-09-05T20:07:35.920+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+[2026-09-05T20:07:35.924+0000] {subprocess.py:93} INFO - 	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:343)
+[2026-09-05T20:07:35.931+0000] {subprocess.py:93} INFO - 	at java.base/java.nio.channels.Channels$ReadableByteChannelImpl.read(Channels.java:387)
+[2026-09-05T20:07:35.936+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.repackaged.gcs.com.google.cloud.hadoop.gcsio.GoogleCloudStorageReadChannel.read(GoogleCloudStorageReadChannel.java:318)
+[2026-09-05T20:07:35.938+0000] {subprocess.py:93} INFO - 	at com.google.cloud.hadoop.fs.gcs.GoogleHadoopFSInputStream.read(GoogleHadoopFSInputStream.java:176)
+[2026-09-05T20:07:35.940+0000] {subprocess.py:93} INFO - 	at java.base/java.io.DataInputStream.read(DataInputStream.java:151)
+[2026-09-05T20:07:35.943+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.fillBuffer(UncompressedSplitLineReader.java:62)
+[2026-09-05T20:07:35.947+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readDefaultLine(LineReader.java:227)
+[2026-09-05T20:07:35.949+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.util.LineReader.readLine(LineReader.java:185)
+[2026-09-05T20:07:35.952+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.UncompressedSplitLineReader.readLine(UncompressedSplitLineReader.java:94)
+[2026-09-05T20:07:35.955+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.skipUtfByteOrderMark(LineRecordReader.java:158)
+[2026-09-05T20:07:35.958+0000] {subprocess.py:93} INFO - 	at org.apache.hadoop.mapreduce.lib.input.LineRecordReader.nextKeyValue(LineRecordReader.java:198)
+[2026-09-05T20:07:35.963+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.RecordReaderIterator.hasNext(RecordReaderIterator.scala:39)
+[2026-09-05T20:07:35.965+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.HadoopFileLinesReader.hasNext(HadoopFileLinesReader.scala:67)
+[2026-09-05T20:07:35.969+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:35.972+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:35.974+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:07:35.980+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.nextIterator(FileScanRDD.scala:283)
+[2026-09-05T20:07:35.987+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.execution.datasources.FileScanRDD$$anon$1.hasNext(FileScanRDD.scala:129)
+[2026-09-05T20:07:35.993+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$10.hasNext(Iterator.scala:460)
+[2026-09-05T20:07:35.996+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+[2026-09-05T20:07:35.999+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.foreach(Iterator.scala:943)
+[2026-09-05T20:07:36.004+0000] {subprocess.py:93} INFO - 	at scala.collection.Iterator.foreach$(Iterator.scala:943)
+[2026-09-05T20:07:36.009+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.foreach(Iterator.scala:1431)
+[2026-09-05T20:07:36.011+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeft(TraversableOnce.scala:237)
+[2026-09-05T20:07:36.015+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeft$(TraversableOnce.scala:220)
+[2026-09-05T20:07:36.018+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceLeft(Iterator.scala:1431)
+[2026-09-05T20:07:36.021+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption(TraversableOnce.scala:249)
+[2026-09-05T20:07:36.024+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceLeftOption$(TraversableOnce.scala:248)
+[2026-09-05T20:07:36.027+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceLeftOption(Iterator.scala:1431)
+[2026-09-05T20:07:36.030+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption(TraversableOnce.scala:256)
+[2026-09-05T20:07:36.033+0000] {subprocess.py:93} INFO - 	at scala.collection.TraversableOnce.reduceOption$(TraversableOnce.scala:256)
+[2026-09-05T20:07:36.036+0000] {subprocess.py:93} INFO - 	at scala.collection.AbstractIterator.reduceOption(Iterator.scala:1431)
+[2026-09-05T20:07:36.039+0000] {subprocess.py:93} INFO - 	at org.apache.spark.sql.catalyst.json.JsonInferSchema.$anonfun$infer$1(JsonInferSchema.scala:107)
+[2026-09-05T20:07:36.041+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2(RDD.scala:858)
+[2026-09-05T20:07:36.045+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.$anonfun$mapPartitions$2$adapted(RDD.scala:858)
+[2026-09-05T20:07:36.047+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:52)
+[2026-09-05T20:07:36.050+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:367)
+[2026-09-05T20:07:36.052+0000] {subprocess.py:93} INFO - 	at org.apache.spark.rdd.RDD.iterator(RDD.scala:331)
+[2026-09-05T20:07:36.061+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:93)
+[2026-09-05T20:07:36.064+0000] {subprocess.py:93} INFO - 	at org.apache.spark.TaskContext.runTaskWithListeners(TaskContext.scala:166)
+[2026-09-05T20:07:36.066+0000] {subprocess.py:93} INFO - 	at org.apache.spark.scheduler.Task.run(Task.scala:141)
+[2026-09-05T20:07:36.071+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$4(Executor.scala:620)
+[2026-09-05T20:07:36.075+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally(SparkErrorUtils.scala:64)
+[2026-09-05T20:07:36.079+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.SparkErrorUtils.tryWithSafeFinally$(SparkErrorUtils.scala:61)
+[2026-09-05T20:07:36.083+0000] {subprocess.py:93} INFO - 	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:94)
+[2026-09-05T20:07:36.086+0000] {subprocess.py:93} INFO - 	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:623)
+[2026-09-05T20:07:36.093+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+[2026-09-05T20:07:36.097+0000] {subprocess.py:93} INFO - 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+[2026-09-05T20:07:36.101+0000] {subprocess.py:93} INFO - 	at java.base/java.lang.Thread.run(Thread.java:840)
+[2026-09-05T20:15:13.428+0000] {subprocess.py:93} INFO - [Stage 6:>                                                          (0 + 4) / 4][Stage 6:>                                                          (0 + 4) / 4][Stage 6:>                                                          (0 + 4) / 4][Stage 6:==============>                                            (1 + 3) / 4][Stage 6:==============>                                            (1 + 3) / 4][Stage 6:=============================>                             (2 + 2) / 4][Stage 6:============================================>              (3 + 1) / 4]                                                                                [Stage 7:>                                                          (0 + 4) / 4][Stage 7:>                                                          (0 + 4) / 4][Stage 7:>                                                          (0 + 4) / 4][Stage 7:==============>                                            (1 + 3) / 4][Stage 7:=============================>                             (2 + 2) / 4][Stage 7:============================================>              (3 + 1) / 4]                                                                                Processing Weather Data...
+[2026-09-05T20:15:13.513+0000] {subprocess.py:93} INFO - Weather data processed and saved to gs://london_bike_data_bronze/silver/weather/
+[2026-09-05T20:15:13.516+0000] {subprocess.py:93} INFO - Processing Bike Data...
+[2026-09-05T20:15:13.520+0000] {subprocess.py:93} INFO - Bike data processed and saved to gs://london_bike_data_bronze/silver/bike/
+[2026-09-05T20:15:16.154+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-09-05T20:15:16.203+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-05T20:15:16.855+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=process_silver_layer, task_id=run_silver_spark_job, run_id=manual__2026-09-05T20:00:52.897773+00:00, execution_date=20260905T200052, start_date=20260905T200129, end_date=20260905T201516
+[2026-09-05T20:15:17.147+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-09-05T20:15:17.432+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-09-05T20:15:17.437+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
